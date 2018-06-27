@@ -1,0 +1,23 @@
+{
+  "name": "react-music-player",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "1.1.4",
+    "recompose": "^0.27.1",
+    "reselect": "^3.0.1",
+    "styled-components": "^3.3.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.75.0",
+    "prettier": "1.13.6"
+  }
+}
