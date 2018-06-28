@@ -1,0 +1,123 @@
+$color-button: #1abc9c;
+$color-accent: #2c3e50;
+$color-input: #fff;
+
+.welcome {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 35px 0 0 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  cursor: default;
+}
+
+.logo {
+  position: absolute;
+  top: 142px;
+  width: 50px;
+  height: auto;
+  z-index: 2;
+}
+.logoMain {
+  position: absolute;
+  top: 100px;
+  width: 120px;
+  height: auto;
+}
+input[type="radio"] {
+  position: fixed;
+  left: -100px;
+}
+
+input:not([type="radio"]) {
+  appearance: none;
+  background-color: $color-input;
+  display: block;
+  transition: 300ms ease;
+  border-radius: 7px;
+  border: 0;
+  max-height: 0;
+  margin: 0;
+  padding: 0 10px;
+  overflow: hidden;
+  width: 92%;
+  opacity: 0;
+  font-size: 16px;
+  text-align: center;
+  outline: 0;
+}
+
+[id="sign-in"]:checked ~ input.sign-in,
+[id="sign-up"]:checked ~ input.sign-up {
+  max-height: 40px;
+  padding: 13px;
+  margin: 30px 0 20px 0;
+  opacity: 0.8;
+}
+
+button {
+  border: none;
+  outline: none;
+  width: 50%;
+  height: 45px;
+  border-radius: 7px;
+  background-color: $color-button;
+  font-size: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    background-color: lighten($color-button, 3%);
+
+  }
+  &:before {
+    font-size: 16px;
+  }
+}
+
+[id="sign-in"]:checked ~ button:before { content: 'Sign In'; }
+[id="sign-up"]:checked ~ button:before { content: 'Sign Up'; }
+
+label {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  color: $color-input;
+  opacity: 0.5;
+  transition: 0.3s ease;
+  width: calc(100% / 3 - 4px);
+}
+
+[id="sign-in"]:checked ~ [for="sign-in"],
+[id="sign-up"]:checked ~ [for="sign-up"] {
+  color: $color-accent;
+  opacity: 1;
+  &:after {
+    border-bottom-color: $color-accent;
+  }
+}
+
+.flex-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 100vh;
+  text-align: center;
+  background: #2980B9;
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);
+}
+
+fieldset {
+  padding-top: 10px;
+  position: relative;
+  width: 25%;
+  height: 38%;
+  min-height: 320px;
+  min-width: 360px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid #E0EAFC;
+}
