@@ -1,0 +1,9 @@
+.wrapper {
+  background: #2980B9;
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); }
+
+.error {
+  width: 100%;
+  color: red;
+  padding: 0;
+  margin: 0; }
