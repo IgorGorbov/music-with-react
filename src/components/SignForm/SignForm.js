@@ -1,46 +1,91 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import logoMain from "./logoMain.svg";
+import React, { Fragment } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { Route, NavLink } from 'react-router-dom';
 
-import "./style.css";
+import { validate } from '../../helpers/formValidate';
 
-class SignForm extends Component {
-  render() {
-    return (
-      <div className="flex-wrap">
-        <h2 className="welcome">Welcome to the music with React &#127911;</h2>
-        <img className="logo" src={logo} alt="logo" />
-        <img className="logoMain" src={logoMain} alt="logoMain" />
-        <fieldset>
-          <form action noValidate>
-            <input type="radio" name="rg" id="sign-in" checked />
-            <input type="radio" name="rg" id="sign-up" />
-            <input type="radio" name="rg" id="reset" />
+import './style.css';
 
-            <label htmlFor="sign-in">Sign in</label>
-            <label htmlFor="sign-up">Sign up</label>
+const renderField = ({
+  input,
+  label,
+  className,
+  type,
+  meta: { touched, error },
+}) => (
+  <Fragment>
+    <input {...input} placeholder={label} type={type} className={className} />
+    {touched && (error && <p className="error">{error}</p>)}
+  </Fragment>
+);
 
-            <input
-              className="sign-up sign-in reset"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              className="sign-up sign-in"
-              type="password"
-              placeholder="Password"
-            />
-            <input
-              className="sign-up"
-              type="password"
-              placeholder="Repeat Password"
-            />
-            <button>Submit</button>
-          </form>
-        </fieldset>
-      </div>
-    );
-  }
-}
+const SignForm = props => {
+  const { handleSubmit, pristine, submitting } = props;
 
-export default SignForm;
+  return (
+    <div className="sign-form">
+      <fieldset>
+        <form onSubmit={handleSubmit}>
+          <NavLink
+            to="/sign-in"
+            className="linkSignForm"
+            activeStyle={{
+              fontWeight: 'bold',
+              color: 'red',
+            }}
+          >
+            Sign in
+          </NavLink>
+          <NavLink
+            to="/sign-up"
+            className="linkSignForm"
+            activeStyle={{
+              fontWeight: 'bold',
+              color: 'red',
+            }}
+          >
+            Sign up
+          </NavLink>
+
+          <Field
+            className="sign-up sign-in"
+            name="email"
+            component={renderField}
+            type="email"
+            label="Email"
+          />
+          <Field
+            className="sign-up sign-in"
+            name="password"
+            component={renderField}
+            type="password"
+            label="Password"
+          />
+          <Route />
+
+          <Route
+            path="/sign-up"
+            render={() => (
+              <Field
+                className="sign-up"
+                name="confirmPassword"
+                component={renderField}
+                type="password"
+                label="Repeat Password"
+              />
+            )}
+          />
+
+          <button type="submit" disabled={pristine || submitting}>
+            Submit
+          </button>
+        </form>
+      </fieldset>
+    </div>
+  );
+};
+
+export default reduxForm({
+  form: 'signForm',
+  validate,
+})(SignForm);
