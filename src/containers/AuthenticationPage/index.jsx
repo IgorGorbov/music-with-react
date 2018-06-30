@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WelcomeTitle from '../Title'
+import Title  from '../Title'
 import LoginForm from '../LoginForm'
 import RegisterForm from '../RegisterForm'
 import Logo from '../Logo'
@@ -13,9 +13,7 @@ const AuthenticationPage = props => {
     return (
         <div className="wrapper">
             <Logo/>
-            <WelcomeTitle>
-                Welcome to the music with React &#127911;
-            </WelcomeTitle>
+            <Title>Welcome to the music with React &#127911;</Title>
             {isLogin ? <LoginForm /> : <RegisterForm />}
         </div>
     );
