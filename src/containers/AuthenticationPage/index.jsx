@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Title  from '../Title'
+import UserForm from '../UserFrom'
 import LoginForm from '../LoginForm'
 import RegisterForm from '../RegisterForm'
 import Logo from '../Logo'
 
-
+import {userLogin} from "../../actions/UserActions";
 
 import './style.css'
-import {userLogin} from "../../actions/UserActions";
 
 const AuthenticationPage = props => {
     const { pathname } = props.location;
@@ -19,9 +19,7 @@ const AuthenticationPage = props => {
                 <Logo />
             </div>
             <Title>Welcome to the music with React &#127911;</Title>
-            <div className="animated bounceInUp">
-                {isLogin ? <LoginForm  /> : <RegisterForm />}
-            </div>
+            <UserForm />
         </div>
     );
 };
