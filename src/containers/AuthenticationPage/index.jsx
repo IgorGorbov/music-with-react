@@ -11,8 +11,6 @@ import {userLogin} from "../../actions/UserActions";
 import './style.css'
 
 const AuthenticationPage = props => {
-    const { pathname } = props.location;
-    const isLogin = pathname === '/user/login' || pathname ==='/user/login/';
     return (
         <div className="wrapper">
             <div className="animated rotateIn 3s">

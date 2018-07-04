@@ -12,22 +12,20 @@ import history from '../../history';
 
 import './style.scss';
 
-const App = ({ user }) => (
-  <ConnectedRouter history={history}>
-    <Switch>
-      <PrivateRoute exact path="/" component={Home} user={user} />
-      <Route exact path="/user/login" component={AuthenticationPage} />
-      <Route exact path="/user/registration" component={AuthenticationPage} />
-    </Switch>
-  </ConnectedRouter>
-);
-
-const mapStateToProps = state => {
-  const { user } = state;
-  return {
-    user,
-  };
+const App = ({ user }) => {
+  return (
+    <ConnectedRouter history={history}>
+      <Switch>
+        <PrivateRoute exact path="/" component={Home} user={user} />
+        <Route exact path="/test" component={Home} />
+        <Route exact path="/user/login" component={AuthenticationPage} />
+        <Route exact path="/user/registration" component={AuthenticationPage} />
+      </Switch>
+    </ConnectedRouter>
+  );
 };
+
+const mapStateToProps = state => state.session;
 
 export default connect(
   mapStateToProps,

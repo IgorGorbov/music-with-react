@@ -1,15 +1,20 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
+import { Redirect } from "react-router-dom";
+import { Fa } from 'mdbreact';
 
-import { Fa, Container, Row, Col, Card } from 'mdbreact';
-import { formFieldChange, formValidation, formClean } from '../../actions/FormActions'
-import { FORM_LOGIN, FROM_SERVER, MIN_LENGTH_PASSWORD } from "../../constants/Validate";
-import { isLoginForm } from '../../selectors'
-import asyncValidation from "../../api/index";
-import FormValidator, { validatingFieldsForLoginForm, validatingFieldsForRegistrationForm } from "../../helpers/FormValidator";
-import { verificationLength } from '../../helpers/FormValidator.js';
-
-import Spinner from '../../containers/Spinner'
+import {
+    formFieldChange,
+    formValidation,
+    changeTypeForm,
+    formAsyncValidation,
+    formClean
+} from '../../actions/FormActions'
+import { getTypeForm, getPathForRedirect } from '../../selectors'
+import FormValidator, {
+    validatingFieldsForLoginForm,
+    validatingFieldsForRegistrationForm
+} from "../../helpers/FormValidator";
 import LoginForm from '../FormLogin'
 import RegistrationForm from '../FormRegistration'
 
@@ -26,9 +31,20 @@ class UserForm extends Component {
         this.renderError = this.renderError.bind(this);
     };
 
+    componentDidMount () {
+        this.props.changeTypeForm(this.props.typeForm);
+    }
+
     componentWillReceiveProps (nextProps) {
-        if(this.props.isLoginForm !== nextProps.isLoginForm)
-            this.props.formClean()
+        if (this.props.typeForm !== nextProps.typeForm)
+            this.props.changeTypeForm(nextProps.typeForm);
+        if (nextProps.form.isValid && this.props.form.isValid !== nextProps.form.isValid)
+            this.props.formAsyncValidation();
+    }
+
+    componentWillUnmount () {
+       const { formClean } = this.props;
+       formClean();
     }
 
     handleChange = field => event => {
@@ -49,45 +65,41 @@ class UserForm extends Component {
         };
         const validation = this.validator.validate(dataFromValidation);
         formValidation(validation);
-
-        // if (validation.isValid) {
-        //     this.setState({
-        //         ...this.state,
-        //         isLoading: true
-        //     });
-        //     asyncValidation(
-        //         this.state.user,
-        //         typeForm
-        //     ).then(res => typeForm === FORM_LOGIN ? this.authentication(res) : this.registration(res));
-        // }
     };
 
     renderError = (error, field) => {
-        if (error && error[field]) {
+        if (error && error[field] && (field !== 'fromServer')) {
             return (
                 <Fragment>
                     {error[field] ? <Fa className="input-error" icon="warning" size="lg" /> : null}
                     <p className="error text-center animated fadeIn">{error[field]}</p>
                 </Fragment>
             )}
-        // if (error && typeof error.fromServer === 'string' && (field === FROM_SERVER)) {
-        //     return <p className="error text-center animated fadeIn">{error.fromServer}</p>;
-        // }
+        if (error && error[field] && (field === 'fromServer')) {
+            return <p className="error text-center animated fadeIn">{error.fromServer}</p>;
+        }
     };
 
     render() {
-        const {form, isLoginForm} = this.props;
-        const {error} = form;
-        const rulesValidation = isLoginForm ? validatingFieldsForLoginForm : validatingFieldsForRegistrationForm;
+        const { form, typeForm, redirectPath, user } = this.props;
+        const isLogin = typeForm === 'Login';
+        const { error, isValid, isAsyncValid, Loading } = form;
+
+        const rulesValidation = isLogin ? validatingFieldsForLoginForm : validatingFieldsForRegistrationForm;
         this.validator = new FormValidator(rulesValidation);
+
+        if (isValid && isAsyncValid && user) {
+          return <Redirect to={redirectPath} />
+        }
         return (
             <Fragment>
-                {isLoginForm ?
+                {isLogin ?
                     <LoginForm
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
                         renderError={this.renderError}
                         error={error}
+                        Loading={Loading}
 
                     />
                     :
@@ -96,6 +108,7 @@ class UserForm extends Component {
                         handleSubmit={this.handleSubmit}
                         renderError={this.renderError}
                         error={error}
+                        Loading={Loading}
                     />
                 }
             </Fragment>
@@ -103,17 +116,18 @@ class UserForm extends Component {
     }
 }
 
-{/*{isLoading ? <Spinner /> : null}*/}
-
-
 const mapStateToProps = state => ({
+    user: state.session.user,
     form: state.form,
-    isLoginForm: isLoginForm(state)
+    typeForm: getTypeForm(state),
+    redirectPath: getPathForRedirect(state)
 });
 
 const mapDispatchToProps = {
     formFieldChange,
     formValidation,
+    formAsyncValidation,
+    changeTypeForm,
     formClean
 };
 

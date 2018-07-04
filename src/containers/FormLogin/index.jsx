@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { Container, Col, Card, Row, Input, Button, CardBody, ModalFooter } from 'mdbreact';
-
-import { FROM_SERVER } from '../../constants/Validate';
+import Spinner from '../Spinner'
 
 const LoginForm = props => {
-  const { handleSubmit, handleChange, renderError, error } = props;
+  const { handleSubmit, handleChange, renderError, error, Loading } = props;
 
   return (
       <Container className="animated bounceInUp">
@@ -41,10 +39,10 @@ const LoginForm = props => {
                                       />
                                       {renderError(error, 'password')}
                                   </div>
-                                  {renderError(error, FROM_SERVER)}
+                                  {renderError(error, 'fromServer')}
                               </div>
                               <div className="text-center py-4 mt-3">
-                                  <Button className="w-50" color="success" type="submit">
+                                  <Button disabled={Loading} className="w-50" color="success" type="submit">
                                       Login
                                   </Button>
                               </div>
@@ -60,6 +58,7 @@ const LoginForm = props => {
                           </p>
                       </ModalFooter>
                   </Card>
+                  {Loading ? <Spinner /> : null}
               </Col>
           </Row>
       </Container>

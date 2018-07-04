@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { Container, Row, Col, Card, Input, Button, CardBody, ModalFooter } from 'mdbreact';
-
-import { FROM_SERVER} from '../../constants/Validate';
-
+import Spinner from '../Spinner'
 
 const FormRegistration = props => {
-    const { handleSubmit, handleChange, renderError, error } = props;
+    const { handleSubmit, handleChange, renderError, error, Loading } = props;
     return (
         <Container className="animated bounceInUp">
             <Row className="d-flex justify-content-center">
@@ -33,10 +30,10 @@ const FormRegistration = props => {
                                         <Input onChange={handleChange('passwordConfirmation')} label="Confirm your password" icon="exclamation-triangle" group type="password" validate error="wrong" success="right"/>
                                         {renderError(error, 'passwordConfirmation')}
                                     </div>
-                                    {renderError(error, FROM_SERVER)}
+                                    {renderError(error, 'fromServer')}
                                 </div>
                                 <div className="text-center py-4 mt-3">
-                                    <Button className="w-50" color="cyan" type="submit">Register</Button>
+                                    <Button disabled={Loading} className="w-50" color="cyan" type="submit">Register</Button>
                                 </div>
                             </form>
                         </CardBody>
@@ -44,6 +41,7 @@ const FormRegistration = props => {
                         <p className="font-small grey-text d-flex justify-content-end">Already register? <Link to="/user/login" className="blue-text ml-1"> Sign In</Link></p>
                     </ModalFooter>
                     </Card>
+                    {Loading ? <Spinner /> : null}
                 </Col>
             </Row>
         </Container>

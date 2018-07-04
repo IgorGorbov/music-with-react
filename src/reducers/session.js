@@ -1,7 +1,7 @@
 import uid from 'uid';
 import {
-  USER_LOGIN_SUCCESS,
-  USER_REGISTRATION_SUCCESS,
+  USER_LOGIN,
+  USER_REGISTRATION,
   USER_LOGOUT,
 } from '../constants/ActionTypes';
 
@@ -11,13 +11,13 @@ const initialState = {
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
-    case USER_LOGIN_SUCCESS: {
+    case USER_LOGIN: {
       return {
         ...state,
         user: Object.assign(payload, { isAuthenticated: true }),
       };
     }
-    case USER_REGISTRATION_SUCCESS: {
+    case USER_REGISTRATION: {
       return {
         ...state,
         user: Object.assign(payload, {
