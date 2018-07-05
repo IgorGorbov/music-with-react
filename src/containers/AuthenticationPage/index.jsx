@@ -1,32 +1,28 @@
 import React from 'react';
 
 import Title  from '../Title'
-import UserForm from '../UserFrom'
-import LoginForm from '../LoginForm'
-import RegisterForm from '../RegisterForm'
+import UserForm from '../UserForm'
 import Logo from '../Logo'
-
-import {userLogin} from "../../actions/UserActions";
 
 import './style.css'
 
-const AuthenticationPage = props => {
+const AuthenticationPage = () => {
     return (
         <div className="wrapper">
-            <div className="animated rotateIn 3s">
-                <Logo />
-            </div>
-            <Title>Welcome to the music with React &#127911;</Title>
+            <Logo />
+            <Title>
+                <p>Welcome to the music with React
+                    <span role="img" aria-label="music">&#127911;</span>
+                </p>
+            </Title>
             <UserForm />
         </div>
     );
 };
 
-const mapDispatchToProps = {
-    userLogin
-};
-
 export default AuthenticationPage;
+
+
 
 
 

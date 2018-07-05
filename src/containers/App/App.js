@@ -11,18 +11,22 @@ import AuthenticationPage from '../AuthenticationPage';
 import history from '../../history';
 
 import './style.scss';
+import PropTypes from 'prop-types';
 
 const App = ({ user }) => {
   return (
     <ConnectedRouter history={history}>
       <Switch>
         <PrivateRoute exact path="/" component={Home} user={user} />
-        <Route exact path="/test" component={Home} />
         <Route exact path="/user/login" component={AuthenticationPage} />
         <Route exact path="/user/registration" component={AuthenticationPage} />
       </Switch>
     </ConnectedRouter>
   );
+};
+
+App.propTypes = {
+  user: PropTypes.object,
 };
 
 const mapStateToProps = state => state.session;

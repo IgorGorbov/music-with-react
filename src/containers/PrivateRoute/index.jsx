@@ -1,6 +1,5 @@
  import React from 'react';
  import { Route, Redirect } from 'react-router-dom';
- import session from "../../reducers/session";
 
  const PrivateRoute = ({ component: Component,  user , ...rest }) => (
     <Route {...rest} render={(props) => {

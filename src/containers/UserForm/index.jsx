@@ -10,16 +10,31 @@ import {
     formAsyncValidation,
     formClean
 } from '../../actions/FormActions'
+
 import { getTypeForm, getPathForRedirect } from '../../selectors'
 import FormValidator, {
     validatingFieldsForLoginForm,
     validatingFieldsForRegistrationForm
 } from "../../helpers/FormValidator";
-import LoginForm from '../FormLogin'
-import RegistrationForm from '../FormRegistration'
+import LoginForm from '../LoginForm'
+import RegistrationForm from '../RegistrationForm'
+import PropTypes from "prop-types";
+
 
 
 class UserForm extends Component {
+
+    static propTypes = {
+        user: PropTypes.object,
+        form: PropTypes.object.isRequired,
+        typeForm: PropTypes.string.isRequired,
+        redirectPath: PropTypes.string.isRequired,
+        formFieldChange: PropTypes.func.isRequired,
+        formValidation: PropTypes.func.isRequired,
+        formAsyncValidation: PropTypes.func.isRequired,
+        changeTypeForm: PropTypes.func.isRequired,
+        formClean: PropTypes.func.isRequired,
+    };
 
     constructor(props) {
         super(props);
