@@ -1,36 +1,28 @@
 import React from 'react';
 
 import Title  from '../Title'
-import LoginForm from '../LoginForm'
-import RegisterForm from '../RegisterForm'
+import UserForm from '../UserForm'
 import Logo from '../Logo'
 
-
-
 import './style.css'
-import {userLogin} from "../../actions/UserActions";
 
-const AuthenticationPage = props => {
-    const { pathname } = props.location;
-    const isLogin = pathname === '/user/login' || pathname ==='/user/login/';
+const AuthenticationPage = () => {
     return (
         <div className="wrapper">
-            <div className="animated rotateIn 3s">
-                <Logo />
-            </div>
-            <Title>Welcome to the music with React &#127911;</Title>
-            <div className="animated bounceInUp">
-                {isLogin ? <LoginForm  /> : <RegisterForm />}
-            </div>
+            <Logo />
+            <Title>
+                <p>Welcome to the music with React
+                    <span role="img" aria-label="music">&#127911;</span>
+                </p>
+            </Title>
+            <UserForm />
         </div>
     );
 };
 
-const mapDispatchToProps = {
-    userLogin
-};
-
 export default AuthenticationPage;
+
+
 
 
 

@@ -1,15 +1,12 @@
-import {
-  USER_LOGIN_SUCCESS,
-  USER_REGISTRATION_SUCCESS,
-} from '../constants/ActionTypes';
+import { USER_LOGIN, USER_REGISTRATION } from '../constants/ActionTypes';
 
 export const userLogin = user => ({
-  type: USER_LOGIN_SUCCESS,
+  type: USER_LOGIN,
   payload: user,
 });
 
 export const userRegistration = user => ({
-  type: USER_REGISTRATION_SUCCESS,
+  type: USER_REGISTRATION,
   payload: user,
 });
 
