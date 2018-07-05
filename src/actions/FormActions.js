@@ -7,7 +7,7 @@ import {
   ASYNC_VALIDATION_SUCCESS,
   ASYNC_VALIDATION_ERROR,
   USER_LOGIN,
-  USER_REGISTRATION,
+  USER_REGISTRATION_START,
 } from '../constants/ActionTypes';
 
 import { fetchData } from '../api';
@@ -71,7 +71,7 @@ export const formAsyncValidation = () => async (dispatch, getState) => {
 
       if (isValidate) {
         dispatch({ type: ASYNC_VALIDATION_SUCCESS });
-        dispatch({ type: USER_REGISTRATION, payload: newUser });
+        dispatch({ type: USER_REGISTRATION_START, payload: newUser });
       } else {
         const error = { fromServer: 'Email is invalid or already taken' };
         dispatch({ type: ASYNC_VALIDATION_ERROR, payload: error });

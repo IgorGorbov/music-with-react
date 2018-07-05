@@ -16,7 +16,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import './style.css';
 
-class TopNavbar extends React.Component {
+class TopNavBar extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -102,4 +103,4 @@ class TopNavbar extends React.Component {
   }
 }
 
-export default TopNavbar;
+export default TopNavBar;

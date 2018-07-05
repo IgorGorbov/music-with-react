@@ -1,4 +1,11 @@
-import { USER_LOGIN, USER_REGISTRATION } from '../constants/ActionTypes';
+import {
+  USER_LOGIN,
+  USER_REGISTRATION_START,
+  USER_REGISTRATION_SUCCESS,
+  USER_REGISTRATION_ERROR,
+} from '../constants/ActionTypes';
+import { SERVER_USERS_URL } from '../constants/ApiConstants';
+import { postData } from '../api';
 
 export const userLogin = user => ({
   type: USER_LOGIN,

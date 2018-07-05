@@ -17,7 +17,8 @@ const App = ({ user }) => {
   return (
     <ConnectedRouter history={history}>
       <Switch>
-        <PrivateRoute exact path="/" component={Home} user={user} />
+        {/*<PrivateRoute exact path="/" component={Home} user={user} />*/}
+        <Route exact path="/" component={Home} user={user} />
         <Route exact path="/user/login" component={AuthenticationPage} />
         <Route exact path="/user/registration" component={AuthenticationPage} />
       </Switch>
