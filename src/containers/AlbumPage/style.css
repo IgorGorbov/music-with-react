@@ -1,0 +1,7 @@
+.album-page .album {
+  margin: 30px;
+  max-width: 400px; }
+
+.album-page .album-container {
+  display: flex;
+  justify-content: center; }

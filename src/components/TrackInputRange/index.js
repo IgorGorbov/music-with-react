@@ -1,11 +1,11 @@
-import React from "react";
-import InputRange from "react-input-range";
-import "react-input-range/lib/css/index.css";
+import React from 'react';
+import InputRange from 'react-input-range';
+import 'react-input-range/lib/css/index.css';
 
-import { formatSeconds } from "../../utils/index";
+import { formatSeconds } from '../../helpers/tracks';
 
-import "./index.scss";
-import styled from "styled-components";
+import './index.scss';
+import styled from 'styled-components';
 
 const RangeWrapper = styled.div`
   .input-range__track--active,
@@ -24,7 +24,7 @@ const RangeWrapper = styled.div`
     color: #000;
   }
   .currentTime {
-    font-family: "Helvetica Neue", san-serif;
+    font-family: 'Helvetica Neue', san-serif;
     font-size: 0.8rem;
     display: block;
     margin-top: 5px;
@@ -34,13 +34,13 @@ const RangeWrapper = styled.div`
 
 class TrackInputRange extends React.Component {
   state = {
-    currentTime: 0
+    currentTime: 0,
   };
 
   componentWillReceiveProps(nextprops) {
     if (this.props.player.playingIndex !== nextprops.player.playingIndex) {
       this.setState({
-        currentTime: 0
+        currentTime: 0,
       });
     }
   }
@@ -48,7 +48,7 @@ class TrackInputRange extends React.Component {
   changeCurrentTime(currentTime) {
     const { changeCurrentTime, onTimeUpdate } = this.props;
     this.setState({
-      currentTime: currentTime
+      currentTime: currentTime,
     });
     onTimeUpdate(currentTime);
     changeCurrentTime(currentTime);
@@ -62,7 +62,7 @@ class TrackInputRange extends React.Component {
       <form className="form">
         <RangeWrapper>
           <InputRange
-            slider={"red"}
+            slider={'red'}
             maxValue={duration > 0 ? duration : 1}
             minValue={0}
             formatLabel={currentTime => formatSeconds(currentTime)}

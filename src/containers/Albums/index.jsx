@@ -11,6 +11,7 @@ const Albums = ({ albums }) => {
         {items && items.length > 0 ? items.map(items => (
             <Album
                 key={items.id}
+                id={items.id}
                 name={items.name}
                 performer={items.performer}
                 genre={items.genre}

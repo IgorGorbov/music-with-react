@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 const Audio = (InnerComponent) => {
     class AudioComponent extends Component {
         constructor(props) {
@@ -17,6 +16,11 @@ const Audio = (InnerComponent) => {
             this.changeVolume = this.changeVolume.bind(this);
             this.onEnded = this.onEnded.bind(this);
             this.toggleMuted = this.toggleMuted.bind(this);
+        }
+
+        componentDidMount() {
+            const { audioElement } = this;
+            audioElement.play();
         }
 
         componentDidUpdate(prevProps) {
@@ -90,7 +94,7 @@ const Audio = (InnerComponent) => {
         }
 
         render() {
-            const { trackUrl } = this.props;
+            const { trackUrl } = this.props.player;
 
             return (
                 <div>
@@ -102,7 +106,7 @@ const Audio = (InnerComponent) => {
                         onLoadedMetadata={this.onLoadedMetadata}
                         onTimeUpdate={this.onTimeUpdate}
                         onVolumeChange={this.onVolumeChange}
-                        ref={(node) => { this.audioElement = node; }}
+                        ref={(node) => {this.audioElement = node}}
                         src={trackUrl}
                     />
                     <InnerComponent

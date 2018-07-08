@@ -1,15 +1,12 @@
-import React, {Component, Fragment} from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types';
 
-import PlayList from '../../components/PlayList'
-import Player from '../../components/Player'
+import Player from '../../containers/Player'
 
-import { getTracks, getTrackById, getTrackUrl } from "../../selectors/index";
 import {
-    fetchData,
-    loadMoreTracks,
-    loadNewPlayingIndex,
+
+    onPlayNewTrack,
     onLoadStart,
     playNextSong,
     onPlay,
@@ -23,61 +20,42 @@ import {
     toggleRepeat,
     toggleShuffle,
     toggleLikeTrack
-} from "../../actions";
-
+} from "../../actions/PlayerActions";
 
 class PlayerContainer extends Component {
-    static propTypes = {
-        fetchData: PropTypes.func,
-        loadMoreTracks: PropTypes.func,
-        loadNewPlayingIndex: PropTypes.func,
-        onLoadStart: PropTypes.func,
-        playNextSong: PropTypes.func,
-        playNextSongFromButton: PropTypes.func,
-        playPrevSong: PropTypes.func,
-        onPlay: PropTypes.func,
-        onPause: PropTypes.func,
-        onLoadedMetadata: PropTypes.func,
-        onTimeUpdate: PropTypes.func,
-        onVolumeChange: PropTypes.func,
-        toggleVolume: PropTypes.func,
-        toggleRepeat: PropTypes.func,
-        toggleShuffle: PropTypes.func,
-        toggleLikeTrack: PropTypes.func
-    };
-
-    componentDidMount () {
-        this.props.fetchData();
-    }
+    // static propTypes = {
+    //     fetchData: PropTypes.func,
+    //     loadMoreTracks: PropTypes.func,
+    //     loadNewPlayingIndex: PropTypes.func,
+    //     onLoadStart: PropTypes.func,
+    //     playNextSong: PropTypes.func,
+    //     playNextSongFromButton: PropTypes.func,
+    //     playPrevSong: PropTypes.func,
+    //     onPlay: PropTypes.func,
+    //     onPause: PropTypes.func,
+    //     onLoadedMetadata: PropTypes.func,
+    //     onTimeUpdate: PropTypes.func,
+    //     onVolumeChange: PropTypes.func,
+    //     toggleVolume: PropTypes.func,
+    //     toggleRepeat: PropTypes.func,
+    //     toggleShuffle: PropTypes.func,
+    //     toggleLikeTrack: PropTypes.func
+    // };
 
     render() {
-        return (
-            <Fragment>
-                <PlayList {...this.props} />
-                <Player {...this.props} />
-            </Fragment>
-        )
+        const { trackUrl } = this.props.player;
+        if (!trackUrl) return null;
+
+        return <Player {...this.props} />
     }
 }
 
-const mapStateToProps = state => {
-    const { player, tracksPage, user } = state;
-    const { playingIndex } = player;
-
-    return {
-        trackUrl: getTrackUrl(state),
-        track: getTrackById(state, playingIndex),
-        tracks: getTracks(state),
-        player,
-        tracksPage,
-        user
-    };
-};
+const mapStateToProps = state => ({
+    player: state.player
+});
 
 const mapDispatchToProps = {
-    fetchData,
-    loadMoreTracks,
-    loadNewPlayingIndex,
+    onPlayNewTrack,
     onLoadStart,
     playNextSong,
     playNextSongFromButton,
@@ -92,5 +70,6 @@ const mapDispatchToProps = {
     toggleShuffle,
     toggleLikeTrack
 };
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlayerContainer);

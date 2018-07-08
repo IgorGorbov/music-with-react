@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import './style.css'
 
-const Album = ({ name, performer, genre, poster, tracks }) => {
+const Album = ({ id, name, performer, genre, poster }) => {
     return (
     <div className="card album mb-4">
 
         <div className="view overlay">
             <img className="card-img-top" src={poster}
-                 alt="Card image cap" />
-            <a href="#!">
+                 alt="Poster" />
+            <Link to={`/albums/${id}`}>
                 <div className="mask rgba-white-slight" />
-            </a>
+            </Link>
         </div>
 
         <div className="card-body">
@@ -23,3 +24,4 @@ const Album = ({ name, performer, genre, poster, tracks }) => {
 };
 
 export default Album;
+

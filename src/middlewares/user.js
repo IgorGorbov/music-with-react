@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
   USER_REGISTRATION_ERROR,
   USER_REGISTRATION_START,

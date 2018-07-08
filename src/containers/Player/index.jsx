@@ -1,9 +1,32 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { compose } from 'redux'
 import PropTypes from 'prop-types';
 
+import { Fa, Button } from 'mdbreact';
+
 import withAudio from '../../hoc/withAudio';
+import TrackInputRange from "../../components/TrackInputRange";
+import VolumeInputRange from "../../components/VolumeInputRange";
 
 //import { isLikeTrack } from '../../selectors/index';
+
+import {
+    onPlayNewTrack,
+    onLoadStart,
+    playNextSong,
+    onPlay,
+    onPause,
+    onLoadedMetadata,
+    onTimeUpdate,
+    onVolumeChange,
+    toggleVolume,
+    playNextSongFromButton,
+    playPrevSong,
+    toggleRepeat,
+    toggleShuffle,
+    toggleLikeTrack
+} from "../../actions/PlayerActions";
 
 import './style.css';
 
@@ -62,8 +85,45 @@ class Player extends Component {
       toggleLikeTrack,
     } = this.props;
 
-    if (!player.trackUrl) return null;
-    return <div className="player">player</div>;
+    return <div className="player animated bounceInUp">
+        <div className="poster text-center">
+            <img
+                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+                alt="poster"
+                className="rounded-circle img-fluid"
+            />
+        </div>
+
+        <div className="track-input-range">
+            <div className="track-info">
+                {`${'Metallica'} - ${'From the Bell Tolls'}`}
+            </div>
+            <TrackInputRange
+                player={player}
+                onTimeUpdate={onTimeUpdate}
+                changeCurrentTime={changeCurrentTime}
+            />
+        </div>
+      <div className="panel-control">
+          <Button outline color="info"><Fa icon="random" size="2x" /></Button>
+          <Button outline color="info"><Fa icon="repeat" size="2x" /></Button>
+          <Button outline color="info"><Fa icon="heart" size="2x" /></Button>
+
+          <Button className="circle-left" outline color="info"><Fa icon="arrow-circle-left" size="2x" /></Button>
+          <Button outline color="info"><Fa icon="play-circle" size="2x" /></Button>
+          <Button outline color="info"><Fa icon="arrow-circle-right" size="2x" /></Button>
+      </div>
+        <div className="track-input-volume">
+            <Button outline color="info"><Fa icon="volume-up" size="2x" /></Button>
+            <VolumeInputRange
+                player={player}
+                changeVolume={changeVolume}
+                onVolumeChange={onVolumeChange}
+            />
+        </div>
+
+
+    </div>;
   }
 }
 

@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux'
 
 import { FETCH_ALBUMS } from '../../constants/ActionTypes'
-import TopNavBar from '../../components/TopNavBar'
 import Albums from '../../containers/Albums'
 import {
     fetchEntities
 } from "../../actions/EntitiesActions";
+
 
 class Home extends Component {
     componentDidMount() {
@@ -16,12 +16,11 @@ class Home extends Component {
         const { albums } = this.props;
         return  (
             <Fragment>
-                <TopNavBar />
                 <Albums albums={albums} />
             </Fragment>
         )
     }
-};
+}
 
 const mapStateToProps = state => ({
     albums: state.albums

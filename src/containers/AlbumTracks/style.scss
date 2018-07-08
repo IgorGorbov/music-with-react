@@ -1,0 +1,34 @@
+.track-list {
+  margin-top: 30px;
+  display: flex;
+  width: 40%;
+  transition: all 0.35s ease;
+  &-item {
+    display: flex;
+    align-items: center;
+    transition: all 0.35s ease;
+    &-active {
+      display: flex;
+      align-items: center;
+      transition: all 0.35s ease;
+      color: #5AB4E0;
+    }
+  }
+}
+.track-icon-toggle{
+  margin-right: 30px;
+  .fa {
+    font-size: 30px;
+  }
+}
+.track-duration {
+  margin-left: auto;
+  cursor: default;
+}
+
+.track-item-info {
+  display: inline-block;
+  cursor: default;
+
+}
+

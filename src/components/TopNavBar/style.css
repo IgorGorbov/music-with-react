@@ -9,3 +9,15 @@
     margin: 0;
     width: 70px;
     height: auto; }
+
+.top-logo {
+  color: #fff;
+  font-size: 22px;
+  padding: 0;
+  margin-right: 30px;
+  margin-left: 20px;
+  line-height: 1;
+  text-decoration: none;
+  transition: 0.35s ease; }
+  .top-logo:hover {
+    color: #ededed; }
