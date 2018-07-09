@@ -8,6 +8,7 @@
   height: auto;
   background: #f0f9ff;
   background: linear-gradient(to bottom, #f0f9ff 0%,#cbebff 47%,#a1dbff 100%);
+  z-index: 100;
 
   padding: 20px 5%;
   .poster {
@@ -35,6 +36,7 @@
     padding: 0;
     transition: all 0.5s ease;
     .input-range {
+      margin-left: 6px;
       display: inline-block;
       width: 140px;
       height: 40px;
@@ -54,6 +56,13 @@
       width: 30px;
       border-radius: 25px;
       .fa.fa-volume-up:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
+      .fa.fa-volume-off:before {
         position: absolute;
         color: #5AB4E0;
         top: -50%;
@@ -81,6 +90,9 @@
         left: 50%;
         transform: translate(-50%, -60%);
       }
+      .fa.fa-random.is-shuffle:before {
+        color: #5087ED;
+      }
       .fa.fa-repeat:before {
         position: absolute;
         color: #5AB4E0;
@@ -88,12 +100,18 @@
         left: 50%;
         transform: translate(-50%, -60%);
       }
+      .fa.fa-repeat.is-repeat:before {
+        color: #5087ED;
+      }
       .fa.fa-heart:before {
         position: absolute;
         color: #5AB4E0;
         top: -50%;
         left: 50%;
         transform: translate(-50%, -60%);
+      }
+      .fa.fa-heart.liked:before {
+        color: red
       }
       .fa.fa-arrow-circle-left:before {
         position: absolute;
@@ -119,6 +137,15 @@
         left: 50%;
         transform: translate(-50%, -60%);
       }
+      .fa.fa-stop-circle:before {
+        position: absolute;
+        font-size: 35px;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+      }
     }
   }
 }
+

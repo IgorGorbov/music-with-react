@@ -9,7 +9,11 @@ const AlbumTracks = ({ tracks, handleOnClick, player, toggleActiveTrack }) => {
        return(
         <ListGroup className="track-list">
             {tracks.length > 0 ? tracks.map(track =>
-                <ListGroupItem className={toggleActiveTrack(track.id, player.playingIndex, player.isPlaying) ? "track-list-item-active": "track-list-item" } onClick={handleOnClick(track.id, track.url)} key={track.id} hover >
+                <ListGroupItem
+                    className={toggleActiveTrack(track.id, player.playingIndex, player.isPlaying) ? "track-list-item-active": "track-list-item" }
+                    onClick={handleOnClick(track.id, track.url)}
+                    key={track.id} hover
+                >
                     <Badge className="track-icon-toggle" color="primary" pill>
                         <Fa icon={toggleActiveTrack(track.id, player.playingIndex, player.isPlaying) ? "stop-circle" : "play-circle"} size="2x"/>
                     </Badge>

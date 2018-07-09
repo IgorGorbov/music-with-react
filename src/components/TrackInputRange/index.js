@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import InputRange from 'react-input-range';
 import 'react-input-range/lib/css/index.css';
 
@@ -32,7 +32,7 @@ const RangeWrapper = styled.div`
   }
 `;
 
-class TrackInputRange extends React.Component {
+class TrackInputRange extends Component {
   state = {
     currentTime: 0,
   };

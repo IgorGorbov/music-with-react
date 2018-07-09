@@ -2,7 +2,9 @@
   margin-top: 30px;
   display: flex;
   width: 40%;
-  transition: all 0.35s ease; }
+  transition: all 0.35s ease;
+  cursor: pointer;
+  user-select: none; }
   .track-list-item {
     display: flex;
     align-items: center;

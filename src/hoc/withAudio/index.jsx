@@ -23,10 +23,16 @@ const Audio = (InnerComponent) => {
             audioElement.play();
         }
 
+        componentWillReceiveProps (nextProps) {
+            const { player } = this.props;
+            if (player.playingIndex !== nextProps.player.playingIndex) {
+                this.changeCurrentTime(0);
+            }
+        }
+
         componentDidUpdate(prevProps) {
             const { audioElement, props } = this;
-            const { trackUrl } = props;
-            if (prevProps.trackUrl !== trackUrl) {
+            if (prevProps.player.trackUrl !== props.player.trackUrl) {
                 audioElement.play();
             }
         }
@@ -54,8 +60,8 @@ const Audio = (InnerComponent) => {
         }
 
         togglePlay() {
-            const { trackUrl } = this.props;
-            if (!trackUrl) return;
+            const { player } = this.props;
+            if (!player.trackUrl) return;
 
             const { audioElement } = this;
 

@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+
+import {
+    onPlayNewTrack,
+    onPlay,
+    onPause,
+} from "../../actions/PlayerActions";
+import {
+    getAlbumById,
+    getPlayingIndex
+} from "../../selectors";
 
 import AlbumPage from '../../containers/AlbumPage'
 
-import {
-
-    onPlayNewTrack,
-    onLoadStart,
-    playNextSong,
-    onPlay,
-    onPause,
-    onLoadedMetadata,
-    onTimeUpdate,
-    onVolumeChange,
-    toggleVolume,
-    playNextSongFromButton,
-    playPrevSong,
-    toggleRepeat,
-    toggleShuffle,
-    toggleLikeTrack
-} from "../../actions/PlayerActions";
-import {getAlbumById, getPlayingIndex} from "../../selectors";
 
 class AlbumPageContainer extends Component {
     // static propTypes = {

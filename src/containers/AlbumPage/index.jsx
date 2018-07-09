@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-
-import { onPlayNewTrack, onPlay, onPause } from '../../actions/PlayerActions'
-
-import { getAlbumById, getPlayingIndex } from "../../selectors";
 
 import Album from '../Album'
 import AlbumTracks from '../AlbumTracks'
@@ -24,7 +19,7 @@ class AlbumPage extends Component {
     handleOnClick = (trackId, trackSrc) => event => {
         const { onPlayNewTrack, playingIndex } = this.props;
 
-        if(trackId !== playingIndex) onPlayNewTrack(trackId, trackSrc);
+        if (trackId !== playingIndex) onPlayNewTrack(trackId, trackSrc);
         this.togglePlay();
     };
 
@@ -48,7 +43,6 @@ class AlbumPage extends Component {
     toggleActiveTrack (trackId, playingIndex, isPlaying) {
         return trackId === playingIndex && isPlaying
     }
-
 
     render() {
         const { album, player } = this.props;

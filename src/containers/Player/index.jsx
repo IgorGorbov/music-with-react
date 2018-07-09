@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { compose } from 'redux'
-import PropTypes from 'prop-types';
+
+//import PropTypes from 'prop-types';
 
 import { Fa, Button } from 'mdbreact';
 
@@ -9,24 +8,6 @@ import withAudio from '../../hoc/withAudio';
 import TrackInputRange from "../../components/TrackInputRange";
 import VolumeInputRange from "../../components/VolumeInputRange";
 
-//import { isLikeTrack } from '../../selectors/index';
-
-import {
-    onPlayNewTrack,
-    onLoadStart,
-    playNextSong,
-    onPlay,
-    onPause,
-    onLoadedMetadata,
-    onTimeUpdate,
-    onVolumeChange,
-    toggleVolume,
-    playNextSongFromButton,
-    playPrevSong,
-    toggleRepeat,
-    toggleShuffle,
-    toggleLikeTrack
-} from "../../actions/PlayerActions";
 
 import './style.css';
 
@@ -49,8 +30,8 @@ class Player extends Component {
   // };
 
   togglePlay() {
-    const { trackUrl, onPlay, onPause } = this.props;
-    if (!trackUrl) return;
+    const { player, onPlay, onPause } = this.props;
+    if (!player.trackUrl) return;
 
     const audio = document.getElementById('audio');
 
@@ -63,32 +44,36 @@ class Player extends Component {
     }
   }
 
-  toggleMuted() {
-    const { toggleMuted, toggleVolume } = this.props;
-    toggleVolume();
-    toggleMuted();
-  }
-
   render() {
     const {
       track,
+      likedTracks,
       player,
       onTimeUpdate,
       changeCurrentTime,
       onVolumeChange,
       changeVolume,
-      user,
       playNextSongFromButton,
       playPrevSong,
       toggleRepeat,
       toggleShuffle,
+      toggleVolume,
       toggleLikeTrack,
     } = this.props;
+
+    if (!track) return null;
+
+    const isLiked = likedTracks.includes(track.id);
+    const isShuffle = player.shuffle;
+    const isRepeat= player.repeat;
+    const isMuted = player.muted;
+    const isPlaying = player.isPlaying;
+
 
     return <div className="player animated bounceInUp">
         <div className="poster text-center">
             <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+                src={track.poster}
                 alt="poster"
                 className="rounded-circle img-fluid"
             />
@@ -96,7 +81,7 @@ class Player extends Component {
 
         <div className="track-input-range">
             <div className="track-info">
-                {`${'Metallica'} - ${'From the Bell Tolls'}`}
+                {`${track.performer} - ${track.name}`}
             </div>
             <TrackInputRange
                 player={player}
@@ -105,16 +90,30 @@ class Player extends Component {
             />
         </div>
       <div className="panel-control">
-          <Button outline color="info"><Fa icon="random" size="2x" /></Button>
-          <Button outline color="info"><Fa icon="repeat" size="2x" /></Button>
-          <Button outline color="info"><Fa icon="heart" size="2x" /></Button>
+          <Button onClick={ () => toggleShuffle() } outline color="info">
+              <Fa className={ isShuffle ? 'is-shuffle' : ''} icon="random" size="2x" />
+          </Button>
+          <Button onClick={ () => toggleRepeat() } outline color="info">
+              <Fa className={ isRepeat ? 'is-repeat' : ''} icon="repeat" size="2x" />
+          </Button>
+          <Button onClick={ () => toggleLikeTrack(track.id)} outline color="info">
+              <Fa className={ isLiked ? 'liked' : ''} icon="heart" size="2x" />
+          </Button>
 
-          <Button className="circle-left" outline color="info"><Fa icon="arrow-circle-left" size="2x" /></Button>
-          <Button outline color="info"><Fa icon="play-circle" size="2x" /></Button>
-          <Button outline color="info"><Fa icon="arrow-circle-right" size="2x" /></Button>
+          <Button onClick={() => playPrevSong()} className="circle-left" outline color="info">
+              <Fa icon="arrow-circle-left" size="2x" />
+          </Button>
+          <Button onClick={ () => this.togglePlay() } outline color="info">
+              <Fa icon={isPlaying ? "stop-circle": "play-circle"} size="2x" />
+          </Button>
+          <Button onClick={() => playNextSongFromButton()} outline color="info">
+              <Fa icon="arrow-circle-right" size="2x" />
+          </Button>
       </div>
         <div className="track-input-volume">
-            <Button outline color="info"><Fa icon="volume-up" size="2x" /></Button>
+            <Button onClick={ () => toggleVolume() } outline color="info">
+                <Fa icon={isMuted ? "volume-off" : "volume-up" }size="2x" />
+            </Button>
             <VolumeInputRange
                 player={player}
                 changeVolume={changeVolume}

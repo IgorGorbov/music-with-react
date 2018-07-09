@@ -66,10 +66,6 @@ export const onVolumeChange = (muted, volume) => ({
   },
 });
 
-export const toggleVolume = () => ({
-  type: TOGGLE_VOLUME,
-});
-
 export const playNextSong = (fromButtonPress = false) => (
   dispatch,
   getState,
@@ -85,7 +81,8 @@ export const playNextSong = (fromButtonPress = false) => (
   } else if (repeat) {
     dispatch(onTimeUpdate(0));
     dispatch(onPlay());
-  } else if (nextIndex !== 0 || fromButtonPress) {
+  } else if (nextIndex || fromButtonPress) {
+    // !== 0
     dispatch(playSong(nextIndex));
   }
 };
@@ -104,6 +101,10 @@ export const playPrevSong = () => (dispatch, getState) => {
 export const searchTrack = text => ({
   type: SEARCH_TRACK,
   payload: text,
+});
+
+export const toggleVolume = () => ({
+  type: TOGGLE_VOLUME,
 });
 
 export const toggleRepeat = () => ({ type: TOGGLE_REPEAT });

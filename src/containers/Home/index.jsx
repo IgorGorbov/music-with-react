@@ -4,8 +4,12 @@ import { connect } from 'react-redux'
 import { FETCH_ALBUMS } from '../../constants/ActionTypes'
 import Albums from '../../containers/Albums'
 import {
-    fetchEntities
+    fetchEntities,
 } from "../../actions/EntitiesActions";
+
+import {
+    onSelectNewAlbum
+} from "../../actions/PlayListActions";
 
 
 class Home extends Component {
@@ -13,10 +17,10 @@ class Home extends Component {
         this.props.fetchEntities(FETCH_ALBUMS)
     }
     render () {
-        const { albums } = this.props;
+        const { albums, onSelectNewAlbum } = this.props;
         return  (
             <Fragment>
-                <Albums albums={albums} />
+                <Albums onSelectNewAlbum={onSelectNewAlbum} albums={albums} />
             </Fragment>
         )
     }
@@ -27,7 +31,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = {
-    fetchEntities
+    fetchEntities,
+    onSelectNewAlbum
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
