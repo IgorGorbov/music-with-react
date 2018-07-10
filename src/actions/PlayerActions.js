@@ -8,11 +8,10 @@ import {
   ON_TIME_UPDATE,
   ON_VOLUME_CHANGE,
   TOGGLE_VOLUME,
-  SEARCH_TRACK,
   TOGGLE_REPEAT,
   TOGGLE_SHUFFLE,
   TOGGLE_LIKE_TRACK,
-  SELECT_CATEGORY,
+  TOGGLE_LIKE_ALBUM,
 } from '../constants/ActionTypes';
 
 import {
@@ -82,7 +81,6 @@ export const playNextSong = (fromButtonPress = false) => (
     dispatch(onTimeUpdate(0));
     dispatch(onPlay());
   } else if (nextIndex || fromButtonPress) {
-    // !== 0
     dispatch(playSong(nextIndex));
   }
 };
@@ -98,11 +96,6 @@ export const playPrevSong = () => (dispatch, getState) => {
   if (prevIndex !== currentIndex) dispatch(playSong(prevIndex));
 };
 
-export const searchTrack = text => ({
-  type: SEARCH_TRACK,
-  payload: text,
-});
-
 export const toggleVolume = () => ({
   type: TOGGLE_VOLUME,
 });
@@ -116,7 +109,7 @@ export const toggleLikeTrack = id => ({
   payload: id,
 });
 
-export const selectCategory = category => ({
-  type: SELECT_CATEGORY,
-  payload: category,
+export const toggleLikeAlbum = id => ({
+  type: TOGGLE_LIKE_ALBUM,
+  payload: id,
 });

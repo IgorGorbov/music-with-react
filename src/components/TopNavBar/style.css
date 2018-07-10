@@ -12,7 +12,7 @@
 
 .top-logo {
   color: #fff;
-  font-size: 22px;
+  font-size: 24px;
   padding: 0;
   margin-right: 30px;
   margin-left: 20px;
@@ -21,3 +21,11 @@
   transition: 0.35s ease; }
   .top-logo:hover {
     color: #ededed; }
+
+.search {
+  margin-right: 50px; }
+  .search .search-input {
+    width: 200px; }
+  .search ::placeholder {
+    color: #fff;
+    opacity: 0.8; }

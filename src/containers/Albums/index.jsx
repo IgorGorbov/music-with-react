@@ -1,28 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import { Fa } from 'mdbreact';
 
 import Album from '../Album'
 
-//<div className="card-group">
+import './style.css'
 
 const Albums = ({ albums, onSelectNewAlbum }) => {
-    const { items } = albums;
     return (
     <div className="card-deck just d-flex justify-content-around">
-        {items && items.length > 0 ? items.map(items => (
-            <div key={items.id} onClick={() => onSelectNewAlbum(items.tracks)}>
-                <Album
-                    key={items.id}
-                    id={items.id}
-                    name={items.name}
-                    performer={items.performer}
-                    genre={items.genre}
-                    poster={items.poster}
-                />
+        {albums && albums.length > 0 ? albums.map(album => (
+            <div className='album-card' key={album.id} onClick={() => onSelectNewAlbum(album.tracks)}>
+                    <Album
+                        key={album.id}
+                        id={album.id}
+                        name={album.name}
+                        performer={album.performer}
+                        genre={album.genre}
+                        poster={album.poster}
+                    />
+                <Link to={`/albums/${album.id}`}><Fa className="album-icon-play" icon="play-circle" size="lg" /></Link>
             </div>
         )): null}
-
     </div>
     )
 };
 
-export  default  Albums;
+export default Albums;

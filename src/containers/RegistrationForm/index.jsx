@@ -41,7 +41,7 @@ const FormRegistration = props => {
                         <p className="font-small grey-text d-flex justify-content-end">Already register? <Link to="/user/login" className="blue-text ml-1"> Sign In</Link></p>
                     </ModalFooter>
                     </Card>
-                    {Loading ? <Spinner /> : null}
+                    {Loading ? <Spinner type={'form'} /> : null}
                 </Col>
             </Row>
         </Container>

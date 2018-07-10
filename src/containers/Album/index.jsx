@@ -15,7 +15,7 @@ const Album = ({ id, name, performer, genre, poster }) => {
         </div>
         <div className="card-body">
             <h4 className="card-title">{name}</h4>
-            <p className="card-text">{performer} || {genre}</p>
+            <p className="card-text">{performer} || {genre.map(g => <span key={g.id} className="genre">{g.name}</span>)}</p>
         </div>
     </div>
     )

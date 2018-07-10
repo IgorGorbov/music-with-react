@@ -1,9 +1,12 @@
 export const getDurationTrack = (url, id) => {
   const audio = new Audio(url);
   audio.addEventListener('loadedmetadata', () => {
-    document.getElementById(id).textContent = formatSeconds(
-      Math.floor(audio.duration),
-    );
+    if (document.getElementById(id)) {
+      console.log('ddddddd');
+      document.getElementById(id).textContent = formatSeconds(
+        Math.floor(audio.duration),
+      );
+    }
   });
 };
 

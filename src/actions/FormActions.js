@@ -36,9 +36,6 @@ export const formClean = () => ({
   type: FORM_CLEAN,
 });
 
-// Maryam.Kuhlman@gmail.com
-// jS6wvEXfor6sZbz
-
 export const formAsyncValidation = () => async (dispatch, getState) => {
   dispatch({ type: ASYNC_VALIDATION_START });
 

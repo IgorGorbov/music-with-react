@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom'
+import { Fa, Button } from 'mdbreact';
 
 import Album from '../Album'
 import AlbumTracks from '../AlbumTracks'
@@ -45,22 +46,29 @@ class AlbumPage extends Component {
     }
 
     render() {
-        const { album, player } = this.props;
+        const { album, player, tracks, likedAlbums, toggleLikeAlbum } = this.props;
         if (!album) return <Redirect to="/"/>;
+
+        const isLiked = likedAlbums.includes(album.id);
 
         return (
             <div className="album-page">
                 <div className="album-container">
-                    <Album
-                        id={album.id}
-                        name={album.name}
-                        performer={album.performer}
-                        genre={album.genre}
-                        poster={album.poster}
-                    />
+                    <div className="album-wrapper">
+                        <Album
+                            id={album.id}
+                            name={album.name}
+                            performer={album.performer}
+                            genre={album.genre}
+                            poster={album.poster}
+                        />
+                        <Button className="like-btn" onClick={ () => toggleLikeAlbum(album.id)} outline color="info">
+                            <Fa className={ isLiked ? 'liked' : ''} icon="heart" size="2x" />
+                        </Button>
+                    </div>
                     <AlbumTracks
                         player={player}
-                        tracks={album.tracks}
+                        tracks={tracks}
                         handleOnClick={this.handleOnClick}
                         toggleActiveTrack={this.toggleActiveTrack}
                     />

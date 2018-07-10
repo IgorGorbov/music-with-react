@@ -58,7 +58,7 @@ const LoginForm = props => {
                           </p>
                       </ModalFooter>
                   </Card>
-                  {Loading ? <Spinner /> : null}
+                  {Loading ? <Spinner type={'form'} /> : null}
               </Col>
           </Row>
       </Container>

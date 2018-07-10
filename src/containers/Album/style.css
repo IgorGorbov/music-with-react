@@ -1,3 +1,7 @@
 .album {
   margin: 30px;
-  max-width: 300px; }
+  max-width: 300px;
+  text-align: center; }
+
+.genre {
+  margin: 0 5px; }

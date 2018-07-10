@@ -4,17 +4,19 @@ import {
   USER_REGISTRATION_SUCCESS,
   USER_LOGOUT,
   TOGGLE_LIKE_TRACK,
+  TOGGLE_LIKE_ALBUM,
 } from '../constants/ActionTypes';
 
 const initialState = {
   user: {
     id: '1',
-    name: 'Shemar',
-    avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/leemunroe/128.jpg',
+    name: 'Halie',
+    avatar:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/leonfedotov/128.jpg',
     likedTracks: [],
     likedAlbums: [],
-    email: 'Maryam.Kuhlman@gmail.com',
-    isAuthenticated: false,
+    email: 'Ona82@gmail.com',
+    isAuthenticated: true,
   },
 };
 
@@ -55,6 +57,19 @@ export default (state = initialState, { type, payload }) => {
             ? [...state.user.likedTracks, payload]
             : state.user.likedTracks.filter(
                 likedTrackId => likedTrackId !== payload,
+              ),
+        },
+      };
+    case TOGGLE_LIKE_ALBUM:
+      const isNewAlbum = !state.user.likedAlbums.includes(payload);
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          likedAlbums: isNewAlbum
+            ? [...state.user.likedAlbums, payload]
+            : state.user.likedAlbums.filter(
+                likedAlbumId => likedAlbumId !== payload,
               ),
         },
       };

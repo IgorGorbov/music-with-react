@@ -3,13 +3,16 @@ import { connect } from 'react-redux'
 // import PropTypes from 'prop-types';
 
 import {
+    toggleLikeAlbum,
     onPlayNewTrack,
     onPlay,
     onPause,
 } from "../../actions/PlayerActions";
 import {
     getAlbumById,
-    getPlayingIndex
+    getEntities,
+    getLikedAlbums,
+    getPlayingIndex,
 } from "../../selectors";
 
 import AlbumPage from '../../containers/AlbumPage'
@@ -43,16 +46,16 @@ class AlbumPageContainer extends Component {
 const mapStateToProps = (state, ownProps) => ({
     player: state.player,
     album: getAlbumById(state, ownProps.match.params.id),
-    playingIndex: getPlayingIndex(state)
+    playingIndex: getPlayingIndex(state),
+    tracks: getEntities(state, 'playlist'),
+    likedAlbums: getLikedAlbums(state)
 });
 
-
-
 const mapDispatchToProps = {
+    toggleLikeAlbum,
     onPlayNewTrack,
     onPlay,
     onPause
 };
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(AlbumPageContainer);

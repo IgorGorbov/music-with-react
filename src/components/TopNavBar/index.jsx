@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Navbar,
   NavbarNav,
   NavbarToggler,
   Collapse,
   NavItem,
-  NavLink,
   Dropdown,
   DropdownToggle,
   DropdownMenu,
@@ -26,6 +25,8 @@ class TopNavBar extends Component {
     };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
     componentDidMount() {
         this._isMounted = true;
@@ -44,31 +45,33 @@ class TopNavBar extends Component {
     if (this._isMounted) this.setState({dropdownOpen: !this.state.dropdownOpen});
   }
 
+  handleChange(e) {
+      const { search } = this.props;
+      search(e.target.value);
+  }
+
+  handleSubmit (e) {
+    e.preventDefault()
+  }
+
   render() {
+    const  { user, userLogout } = this.props;
     return (
         <Navbar color="info-color" dark expand="md" scrolling>
           <Link className="top-logo" to="/"><strong>Music with React</strong></Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
           <Collapse isOpen={this.state.collapse} navbar>
             <NavbarNav left>
-              <NavItem>
-                <NavLink to="/user/login">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="#">Features</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="#">Pricing</NavLink>
-              </NavItem>
             </NavbarNav>
             <NavbarNav right>
               <NavItem>
-                <form className="form-inline md-form mt-0">
+                <form className="search form-inline md-form mt-0" onSubmit={this.handleSubmit}>
                   <input
-                    className="form-control mr-sm-2 mb-0 text-white"
+                    className="form-control search-input mr-sm-2 mb-0 text-white"
                     type="text"
                     placeholder="Search"
                     aria-label="Search"
+                    onChange={this.handleChange}
                   />
                 </form>
               </NavItem>
@@ -81,17 +84,20 @@ class TopNavBar extends Component {
                   <DropdownToggle nav className="d-flex justify-content-end">
                     <div className="avatar text-center">
                       <img
-                        src="https://mdbootstrap.com/img/Photos/Avatars/img%20(27).jpg"
+                        src={user ? user.avatar : 'https://cdn0.iconfinder.com/data/icons/unigrid-flat-human-vol-2/90/011_101_anonymous_anonym_hacker_vendetta_user_human_avatar-512.png'}
                         alt="avatar"
                         className="rounded-circle img-fluid img-thumbnail"
                       />
                     </div>
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem href="#">Action</DropdownItem>
-                    <DropdownItem href="#">Another Action</DropdownItem>
-                    <DropdownItem href="#">Something else here</DropdownItem>
-                    <DropdownItem href="#">Something else here</DropdownItem>
+                      {user ? <DropdownItem onClick={() => userLogout()}>Logout</DropdownItem>
+                         :
+                          <Fragment>
+                            <DropdownItem><Link to="/user/login">Login</Link></DropdownItem>
+                            <DropdownItem><Link to="/user/registration">Registration</Link></DropdownItem>
+                          </Fragment>
+                      }
                   </DropdownMenu>
                 </Dropdown>
               </NavItem>

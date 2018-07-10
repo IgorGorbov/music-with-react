@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 // import PropTypes from 'prop-types';
 
 import Player from '../../containers/Player'
-import { getCurrentTrack } from '../../selectors'
+import { getCurrentTrack, getLikedTracks } from '../../selectors'
 
 import {
     onPlayNewTrack,
@@ -54,7 +54,7 @@ class PlayerContainer extends Component {
 const mapStateToProps = state => ({
     player: state.player,
     track: getCurrentTrack(state, state.player.playingIndex),
-    likedTracks: state.session.user.likedTracks
+    likedTracks: getLikedTracks(state)
 });
 
 const mapDispatchToProps = {
