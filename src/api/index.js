@@ -6,6 +6,10 @@ export const fetchData = async url => {
   return await axios.get(url).then(response => response.data);
 };
 
+export const postData = async (url, data) => {
+  return await axios.post(url, data).then(response => response);
+};
+
 //  Maryam.Kuhlman@gmail.com
 //  jS6wvEXfor6sZbz
 

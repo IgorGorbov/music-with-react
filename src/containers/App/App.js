@@ -1,31 +1,36 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Fragment } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { ConnectedRouter } from 'react-router-redux';
 
-import Home from '../Home';
-import PrivateRoute from '../PrivateRoute';
+import TopNavBarContainer from '../../containers/TopNavBarContainer';
+import HomeContainer from '../HomeContainer';
+import AlbumPageContainer from '../AlbumPageContainer';
 import AuthenticationPage from '../AuthenticationPage';
+import PlayerContainer from '../PlayerContainer';
+import Page404 from '../Page404';
 
-import './style.scss';
+import history from '../../history';
 
-const App = ({ user }) => (
-  <Router>
-    <Switch>
-      <PrivateRoute exact path="/" component={Home} user={user} />
-      <Route exact path="/user/login" component={AuthenticationPage} />
-      <Route exact path="/user/registration" component={AuthenticationPage} />
-    </Switch>
-  </Router>
-);
-
-const mapStateToProps = state => {
-  const { user } = state;
-  return {
-    user,
-  };
+const App = () => {
+  return (
+    <ConnectedRouter history={history}>
+      <Fragment>
+        <TopNavBarContainer />
+        <Switch>
+          <Route exact path="/" component={HomeContainer} />
+          <Route exact path="/albums/:id" component={AlbumPageContainer} />
+          <Route exact path="/user/login" component={AuthenticationPage} />
+          <Route
+            exact
+            path="/user/registration"
+            component={AuthenticationPage}
+          />
+          <Route component={Page404} />
+        </Switch>
+        <PlayerContainer />
+      </Fragment>
+    </ConnectedRouter>
+  );
 };
 
-export default connect(
-  mapStateToProps,
-  null,
-)(App);
+export default App;

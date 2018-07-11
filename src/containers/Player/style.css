@@ -1,0 +1,123 @@
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: auto;
+  background: #f0f9ff;
+  background: linear-gradient(to bottom, #f0f9ff 0%, #cbebff 47%, #a1dbff 100%);
+  z-index: 100;
+  padding: 20px 5%; }
+  .player .poster {
+    margin: -10px 30px 0 30px;
+    max-width: 90px;
+    height: auto; }
+  .player .track-input-range {
+    margin: 0;
+    width: 25%; }
+    .player .track-input-range .track-info {
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: 5px; }
+  .player .track-input-volume {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto 0 0;
+    width: 360px;
+    padding: 0;
+    transition: all 0.5s ease; }
+    .player .track-input-volume .input-range {
+      margin-left: 6px;
+      display: inline-block;
+      width: 140px;
+      height: 40px; }
+      .player .track-input-volume .input-range__label.input-range__label--value {
+        padding: 0;
+        color: #000;
+        font-size: 14px;
+        margin: 30px 0 0 0; }
+      .player .track-input-volume .input-range__track {
+        height: 5px;
+        border-radius: 5px; }
+    .player .track-input-volume button {
+      display: inline-block;
+      width: 30px;
+      border-radius: 25px; }
+      .player .track-input-volume button .fa.fa-volume-up:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .track-input-volume button .fa.fa-volume-off:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+  .player .circle-left {
+    margin-left: 30px; }
+  .player .panel-control {
+    padding: 0;
+    margin: 5px 0 0 0;
+    width: 50%;
+    text-align: center; }
+    .player .panel-control button {
+      width: 30px;
+      border-radius: 25px; }
+      .player .panel-control button .fa.fa-random:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-random.is-shuffle:before {
+        color: #5087ED; }
+      .player .panel-control button .fa.fa-repeat:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-repeat.is-repeat:before {
+        color: #5087ED; }
+      .player .panel-control button .fa.fa-heart:before {
+        position: absolute;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-heart.liked:before {
+        color: red; }
+      .player .panel-control button .fa.fa-arrow-circle-left:before {
+        position: absolute;
+        font-size: 35px;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-arrow-circle-right:before {
+        position: absolute;
+        font-size: 35px;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-play-circle:before {
+        position: absolute;
+        font-size: 35px;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }
+      .player .panel-control button .fa.fa-stop-circle:before {
+        position: absolute;
+        font-size: 35px;
+        color: #5AB4E0;
+        top: -50%;
+        left: 50%;
+        transform: translate(-50%, -60%); }

@@ -1,29 +1,10 @@
-import {
-  USER_LOGIN_SUCCESS,
-  USER_REGISTRATION_SUCCESS,
-} from '../constants/ActionTypes';
+import { USER_LOGIN, USER_LOGOUT } from '../constants/ActionTypes';
 
 export const userLogin = user => ({
-  type: USER_LOGIN_SUCCESS,
+  type: USER_LOGIN,
   payload: user,
 });
 
-export const userRegistration = user => ({
-  type: USER_REGISTRATION_SUCCESS,
-  payload: user,
+export const userLogout = () => ({
+  type: USER_LOGOUT,
 });
-
-// const fetchUserFollowings = id => async dispatch => {
-//   const { json } = await callApi(USER_FOLLOWINGS_URL.replace(':id', id));
-//   const { collection } = json;
-//   const { entities, result } = normalize(collection, [userSchema]);
-//
-//   dispatch(
-//     fetchUserFollowingsSuccess({
-//       users: {
-//         ...entities.users,
-//         [id]: { followings: result },
-//       },
-//     }),
-//   );
-// };

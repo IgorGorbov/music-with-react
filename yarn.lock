@@ -6649,7 +6649,7 @@ sass-graph@^2.1.1, sass-graph@^2.2.4:
   dependencies:
     glob "^7.0.0"
     lodash "^4.0.0"
-    scss-tokenizer "^0.2.3"
+    style-tokenizer "^0.2.3"
     yargs "^7.0.0"
 
 sax@^1.2.1, sax@^1.2.4, sax@~1.2.1:
@@ -6664,7 +6664,7 @@ schema-utils@^0.3.0:
 
 scss-tokenizer@^0.2.3:
   version "0.2.3"
-  resolved "https://registry.yarnpkg.com/scss-tokenizer/-/scss-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
+  resolved "https://registry.yarnpkg.com/style-tokenizer/-/style-tokenizer-0.2.3.tgz#8eb06db9a9723333824d3f5530641149847ce5d1"
   dependencies:
     js-base64 "^2.1.8"
     source-map "^0.4.2"
