@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-// import PropTypes from 'prop-types';
-
-import Player from '../../containers/Player'
 import { getCurrentTrack, getLikedTracks } from '../../selectors'
 
 import {
@@ -23,25 +21,29 @@ import {
     toggleLikeTrack
 } from "../../actions/PlayerActions";
 
+import Player from '../../containers/Player'
+
 class PlayerContainer extends Component {
-    // static propTypes = {
-    //     fetchData: PropTypes.func,
-    //     loadMoreTracks: PropTypes.func,
-    //     loadNewPlayingIndex: PropTypes.func,
-    //     onLoadStart: PropTypes.func,
-    //     playNextSong: PropTypes.func,
-    //     playNextSongFromButton: PropTypes.func,
-    //     playPrevSong: PropTypes.func,
-    //     onPlay: PropTypes.func,
-    //     onPause: PropTypes.func,
-    //     onLoadedMetadata: PropTypes.func,
-    //     onTimeUpdate: PropTypes.func,
-    //     onVolumeChange: PropTypes.func,
-    //     toggleVolume: PropTypes.func,
-    //     toggleRepeat: PropTypes.func,
-    //     toggleShuffle: PropTypes.func,
-    //     toggleLikeTrack: PropTypes.func
-    // };
+
+    static propTypes = {
+        player: PropTypes.object.isRequired,
+        track: PropTypes.array,
+        likedTracks: PropTypes.array.isRequired,
+        onPlayNewTrack: PropTypes.func.isRequired,
+        onLoadStart: PropTypes.func.isRequired,
+        playNextSong: PropTypes.func.isRequired,
+        playNextSongFromButton: PropTypes.func.isRequired,
+        playPrevSong: PropTypes.func.isRequired,
+        onPlay: PropTypes.func.isRequired,
+        onPause: PropTypes.func.isRequired,
+        onLoadedMetadata: PropTypes.func.isRequired,
+        onTimeUpdate: PropTypes.func.isRequired,
+        onVolumeChange: PropTypes.func.isRequired,
+        toggleVolume: PropTypes.func.isRequired,
+        toggleRepeat: PropTypes.func.isRequired,
+        toggleShuffle: PropTypes.func.isRequired,
+        toggleLikeTrack: PropTypes.func.isRequired
+    };
 
     render() {
         const { trackUrl } = this.props.player;

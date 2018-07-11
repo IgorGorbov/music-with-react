@@ -36,15 +36,21 @@ export const getEntities = (state, entities) => {
     const searchName = item.name
       .toLowerCase()
       .includes(state.filters.search.toLowerCase());
-    const searchPerformer = item.performer.some(p =>
-      p.toLowerCase().includes(state.filters.search.toLowerCase()),
-    );
+
+    const searchPerformer = Array.isArray(item.performer)
+      ? item.performer.some(p =>
+          p.toLowerCase().includes(state.filters.search.toLowerCase()),
+        )
+      : item.performer
+          .toLowerCase()
+          .includes(state.filters.search.toLowerCase());
+
     return searchName || searchPerformer;
   };
 
   const filterByCategory = item => {
     const { category } = state.filters;
-    if (category.length > 0) {
+    if (category.length > 0 && item.genre) {
       const cat = item.genre.map(g => g.id);
       return state.filters.category.includes(...cat);
     }
@@ -53,8 +59,8 @@ export const getEntities = (state, entities) => {
 
   const filterByFavorite = item => {
     const { isFavoriteAlbums } = state.filters;
-    const { likedAlbums } = state.session.user;
-    if (isFavoriteAlbums) {
+    if (isFavoriteAlbums && state.session.user) {
+      const { likedAlbums } = state.session.user;
       return likedAlbums.includes(item.id);
     }
     return true;
@@ -68,6 +74,11 @@ export const getEntities = (state, entities) => {
 export const getPlaylistItemsLength = state => state.playlist.items.length;
 
 export const getCurrentIndex = state => state.player.playingIndex;
+
+export const getNextUrl = (state, id) => {
+  const { playlist } = state;
+  return playlist.items.find(item => item.id === id).url;
+};
 
 export const getNextIndex = state => {
   const playingIndex = getCurrentIndex(state);

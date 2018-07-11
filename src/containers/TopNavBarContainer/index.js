@@ -1,31 +1,21 @@
 import React, { Component } from 'react';
+import { compose } from 'redux';
 import { connect } from 'react-redux';
-// import PropTypes from 'prop-types';
-
-import TopNavBar from '../../components/TopNavBar';
+import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import { search } from '../../actions/EntitiesActions';
 import { userLogout } from '../../actions/UserActions';
 
+import TopNavBar from '../../components/TopNavBar';
+
 class TopNavBarContainer extends Component {
-  // static propTypes = {
-  //     fetchData: PropTypes.func,
-  //     loadMoreTracks: PropTypes.func,
-  //     loadNewPlayingIndex: PropTypes.func,
-  //     onLoadStart: PropTypes.func,
-  //     playNextSong: PropTypes.func,
-  //     playNextSongFromButton: PropTypes.func,
-  //     playPrevSong: PropTypes.func,
-  //     onPlay: PropTypes.func,
-  //     onPause: PropTypes.func,
-  //     onLoadedMetadata: PropTypes.func,
-  //     onTimeUpdate: PropTypes.func,
-  //     onVolumeChange: PropTypes.func,
-  //     toggleVolume: PropTypes.func,
-  //     toggleRepeat: PropTypes.func,
-  //     toggleShuffle: PropTypes.func,
-  //     toggleLikeTrack: PropTypes.func
-  // };
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    user: PropTypes.object,
+    search: PropTypes.func.isRequired,
+    userLogout: PropTypes.func.isRequired,
+  };
 
   render() {
     const { location } = this.props;
@@ -44,7 +34,10 @@ const mapDispatchToProps = {
   userLogout,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
+export default compose(
+  withRouter,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps,
+  ),
 )(TopNavBarContainer);

@@ -22,27 +22,29 @@ class TopNavBar extends Component {
       collapse: false,
       isWideEnough: false,
       dropdownOpen: false,
+      isMounted: false,
     };
     this.onClick = this.onClick.bind(this);
     this.toggle = this.toggle.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+
   }
     componentDidMount() {
-        this._isMounted = true;
+        this.setState({ isMounted: true });
     }
 
     componentWillUnmount() {
-        this._isMounted = false;
+        this.setState({ isMounted: false });
     }
 
 
   onClick() {
-    if (this._isMounted)this.setState({collapse: !this.state.collapse});
+    if (this.state.isMounted) this.setState({ collapse: !this.state.collapse });
   }
 
   toggle() {
-    if (this._isMounted) this.setState({dropdownOpen: !this.state.dropdownOpen});
+    if (this.state.isMounted) this.setState({ dropdownOpen: !this.state.dropdownOpen} );
   }
 
   handleChange(e) {
@@ -57,7 +59,7 @@ class TopNavBar extends Component {
   render() {
     const  { user, userLogout } = this.props;
     return (
-        <Navbar color="info-color" dark expand="md" scrolling>
+        <Navbar color="info-color" dark expand="md">
           <Link className="top-logo" to="/"><strong>Music with React</strong></Link>
           {!this.state.isWideEnough && <NavbarToggler onClick={this.onClick} />}
           <Collapse isOpen={this.state.collapse} navbar>

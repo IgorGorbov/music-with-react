@@ -8,16 +8,7 @@ import {
 } from '../constants/ActionTypes';
 
 const initialState = {
-  user: {
-    id: '1',
-    name: 'Halie',
-    avatar:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/leonfedotov/128.jpg',
-    likedTracks: [],
-    likedAlbums: [],
-    email: 'Ona82@gmail.com',
-    isAuthenticated: true,
-  },
+  user: null,
 };
 
 export default (state = initialState, { type, payload }) => {

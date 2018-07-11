@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from "prop-types";
 import { Link } from 'react-router-dom'
+
 import { Fa } from 'mdbreact';
 
 import Album from '../Album'
@@ -24,6 +26,11 @@ const Albums = ({ albums, onSelectNewAlbum }) => {
         )): null}
     </div>
     )
+};
+
+Albums.propTypes = {
+    albums: PropTypes.array.isRequired,
+    onSelectNewAlbum: PropTypes.func.isRequired,
 };
 
 export default Albums;

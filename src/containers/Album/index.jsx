@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 import { Link } from 'react-router-dom'
 
 import './style.css'
@@ -19,6 +21,14 @@ const Album = ({ id, name, performer, genre, poster }) => {
         </div>
     </div>
     )
+};
+
+Album.propTypes = {
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    performer: PropTypes.array.isRequired,
+    genre: PropTypes.array.isRequired,
+    poster: PropTypes.string.isRequired
 };
 
 export default Album;

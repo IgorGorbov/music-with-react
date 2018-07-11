@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from "prop-types";
+
 import { ListGroup, ListGroupItem, Badge, Fa } from 'mdbreact'
 
 import { getDurationTrack } from '../../helpers/tracks'
@@ -25,7 +27,12 @@ const AlbumTracks = ({ tracks, handleOnClick, player, toggleActiveTrack }) => {
     );
 };
 
+AlbumTracks.propTypes = {
+    tracks: PropTypes.array.isRequired,
+    player: PropTypes.object.isRequired,
+    handleOnClick: PropTypes.func.isRequired,
+    toggleActiveTrack: PropTypes.func.isRequired
+};
+
 export default AlbumTracks;
 
-
-// stop-circle

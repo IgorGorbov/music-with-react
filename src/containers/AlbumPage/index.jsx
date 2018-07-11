@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import { Redirect } from 'react-router-dom'
+
 import { Fa, Button } from 'mdbreact';
 
 import Album from '../Album'
@@ -8,6 +10,18 @@ import AlbumTracks from '../AlbumTracks'
 import './style.css'
 
 class AlbumPage extends Component {
+
+    static propTypes = {
+        player: PropTypes.object.isRequired,
+        album: PropTypes.object,
+        playingIndex: PropTypes.string,
+        tracks: PropTypes.array.isRequired,
+        likedAlbums: PropTypes.array.isRequired,
+        toggleVolume: PropTypes.func,
+        toggleLikeAlbum: PropTypes.func.isRequired,
+        onPlay: PropTypes.func.isRequired,
+        onPause: PropTypes.func.isRequired
+    };
 
     constructor(props) {
         super(props);

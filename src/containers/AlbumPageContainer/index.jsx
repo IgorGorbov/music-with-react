@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import { Redirect } from 'react-router-dom'
 
 import {
     toggleLikeAlbum,
@@ -19,32 +20,31 @@ import AlbumPage from '../../containers/AlbumPage'
 
 
 class AlbumPageContainer extends Component {
-    // static propTypes = {
-    //     fetchData: PropTypes.func,
-    //     loadMoreTracks: PropTypes.func,
-    //     loadNewPlayingIndex: PropTypes.func,
-    //     onLoadStart: PropTypes.func,
-    //     playNextSong: PropTypes.func,
-    //     playNextSongFromButton: PropTypes.func,
-    //     playPrevSong: PropTypes.func,
-    //     onPlay: PropTypes.func,
-    //     onPause: PropTypes.func,
-    //     onLoadedMetadata: PropTypes.func,
-    //     onTimeUpdate: PropTypes.func,
-    //     onVolumeChange: PropTypes.func,
-    //     toggleVolume: PropTypes.func,
-    //     toggleRepeat: PropTypes.func,
-    //     toggleShuffle: PropTypes.func,
-    //     toggleLikeTrack: PropTypes.func
-    // };
+
+    static propTypes = {
+        player: PropTypes.object.isRequired,
+        user: PropTypes.object,
+        album: PropTypes.object,
+        location: PropTypes.object.isRequired,
+        playingIndex: PropTypes.string,
+        tracks: PropTypes.array.isRequired,
+        likedAlbums: PropTypes.array.isRequired,
+        toggleVolume: PropTypes.func,
+        toggleLikeAlbum: PropTypes.func.isRequired,
+        onPlay: PropTypes.func.isRequired,
+        onPause: PropTypes.func.isRequired
+    };
 
     render() {
+        const { user } = this.props;
+        if (!user) return <Redirect to={{ pathname: '/user/login', state: {from: this.props.location} }}/>;
         return <AlbumPage {...this.props} />
     }
 }
 
 const mapStateToProps = (state, ownProps) => ({
     player: state.player,
+    user: state.session.user,
     album: getAlbumById(state, ownProps.match.params.id),
     playingIndex: getPlayingIndex(state),
     tracks: getEntities(state, 'playlist'),

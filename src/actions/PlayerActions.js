@@ -20,6 +20,7 @@ import {
   getRepeat,
   getShuffle,
   getShuffleIndex,
+  getNextUrl,
 } from '../selectors';
 
 export const playSong = playingIndex => ({
@@ -71,17 +72,18 @@ export const playNextSong = (fromButtonPress = false) => (
 ) => {
   const state = getState();
   const nextIndex = getNextIndex(state);
+  const nextUrl = getNextUrl(state, nextIndex);
   const repeat = getRepeat(state);
   const shuffle = getShuffle(state);
 
   if (shuffle) {
     const shuffleIndex = getShuffleIndex(state);
-    dispatch(playSong(shuffleIndex));
+    dispatch(onPlayNewTrack(shuffleIndex, nextUrl));
   } else if (repeat) {
     dispatch(onTimeUpdate(0));
     dispatch(onPlay());
   } else if (nextIndex || fromButtonPress) {
-    dispatch(playSong(nextIndex));
+    dispatch(onPlayNewTrack(nextIndex, nextUrl));
   }
 };
 
@@ -92,8 +94,9 @@ export const playPrevSong = () => (dispatch, getState) => {
   const state = getState();
   const currentIndex = state.player.playingIndex;
   const prevIndex = getPrevIndex(state);
+  const prevUrl = getNextUrl(state, prevIndex);
 
-  if (prevIndex !== currentIndex) dispatch(playSong(prevIndex));
+  if (prevIndex !== currentIndex) dispatch(onPlayNewTrack(prevIndex, prevUrl));
 };
 
 export const toggleVolume = () => ({

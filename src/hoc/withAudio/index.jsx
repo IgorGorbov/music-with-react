@@ -56,7 +56,6 @@ const Audio = (InnerComponent) => {
         onEnded() {
             const { playNextSong } = this.props;
             playNextSong();
-            this.togglePlay()
         }
 
         togglePlay() {
