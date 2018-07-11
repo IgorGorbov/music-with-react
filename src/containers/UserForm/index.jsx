@@ -21,7 +21,6 @@ import RegistrationForm from '../RegistrationForm'
 import PropTypes from "prop-types";
 
 
-
 class UserForm extends Component {
 
     static propTypes = {

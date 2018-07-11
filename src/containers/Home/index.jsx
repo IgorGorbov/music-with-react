@@ -5,6 +5,7 @@ import { SERVER_ALBUMS_URL, SERVER_CATEGORIES_URL } from '../../constants/ApiCon
 import { FETCH_ALBUMS, FETCH_CATEGORIES } from '../../constants/ActionTypes'
 import Categories from '../../containers/Categories'
 import Albums from '../../containers/Albums'
+import Modal from '../../containers/Modal';
 import Spinner from '../Spinner'
 import {
     fetchEntities,
@@ -43,6 +44,7 @@ class Home extends Component {
                     user={user}
                 />
                 <Albums onSelectNewAlbum={onSelectNewAlbum} albums={albums} />
+                <Modal />
             </div>
         )
     }

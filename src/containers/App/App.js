@@ -13,8 +13,6 @@ import AuthenticationPage from '../AuthenticationPage';
 import TopNavBarContainer from '../../containers/TopNavBarContainer';
 import PlayerContainer from '../PlayerContainer';
 
-import './style.scss';
-
 const App = ({ user }) => {
   return (
     <ConnectedRouter history={history}>
