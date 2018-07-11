@@ -12,6 +12,7 @@ import AlbumPageContainer from '../AlbumPageContainer';
 import AuthenticationPage from '../AuthenticationPage';
 import TopNavBarContainer from '../../containers/TopNavBarContainer';
 import PlayerContainer from '../PlayerContainer';
+import Page404 from '../Page404';
 
 const App = ({ user }) => {
   return (
@@ -29,6 +30,7 @@ const App = ({ user }) => {
             path="/user/registration"
             component={AuthenticationPage}
           />
+          <Route component={Page404} />
         </Switch>
         <PlayerContainer />
       </Fragment>

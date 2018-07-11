@@ -44,7 +44,7 @@ class Home extends Component {
                     user={user}
                 />
                 <Albums onSelectNewAlbum={onSelectNewAlbum} albums={albums} />
-                <Modal />
+                {!user ? <Modal /> : null}
             </div>
         )
     }

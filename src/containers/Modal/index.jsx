@@ -8,7 +8,7 @@ class ModalPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            modal: false
+            modal: true
         };
 
         this.toggle = this.toggle.bind(this);
@@ -23,13 +23,10 @@ class ModalPage extends React.Component {
     render() {
         return (
             <Container>
-                <Button color="danger" onClick={this.toggle}>Modal</Button>
                 <Modal isOpen={this.state.modal} toggle={this.toggle} centered>
-                    <ModalHeader toggle={this.toggle}>Welcome to the music with React
-                        <span role="img" aria-label="smile">&#128521;</span>
-                    </ModalHeader>
+                    <ModalHeader toggle={this.toggle}>Welcome to the music with React!</ModalHeader>
                     <ModalBody>
-                        Login in your account to listen to music.
+                        Login in your account to listen to music <span role="img" aria-label="smile">&#128521;</span>
                     </ModalBody>
                     <ModalFooter >
                         <Button color="secondary" onClick={this.toggle}>Close</Button>
