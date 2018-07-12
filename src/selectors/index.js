@@ -17,8 +17,12 @@ export const getAlbumById = (state, id) => {
 
 export const getPlayingIndex = state => state.player.playingIndex;
 
-export const getCurrentTrack = (state, playingIndex) => {
-  return state.playlist.items.find(track => track.id === playingIndex);
+export const getCurrentTrack = state => {
+  const playingIndex = state.player.playingIndex;
+  const currentTrack = state.playlist.items.find(
+    track => track.id === playingIndex,
+  );
+  return currentTrack ? currentTrack : state.track;
 };
 
 export const getLikedTracks = state => {

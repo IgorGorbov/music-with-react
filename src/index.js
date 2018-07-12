@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 import store from '../src/store';
-import App from './containers/App/App';
+import App from './components/App/App';
 
 ReactDOM.render(
   <Provider store={store}>

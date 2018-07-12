@@ -1,0 +1,979 @@
+{
+  "albums": [
+    {
+      "id": "1",
+      "name": "Ride The Lightning",
+      "poster": "https://avatars.yandex.net/get-music-content/192707/f5c4bc17.a.3935393-2/400x400",
+      "performer": [
+        "Metallica"
+      ],
+      "tracks": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "Astronomy",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrdVFmZkRqVklWNlBkdHJKU3U5UHNnOUR4UlZvdnplMlEzOUovejFKeGsxVXpOZUw5bVhsYkhuL05wc0NMd0x5Vzg9/metallica-astronomy_(Krolik.biz).mp3"
+        },
+        {
+          "id": "2",
+          "albumId": "1",
+          "name": "Fade Tor Black",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrditXN21iOFUwYTMwbmd6SUx5L1N2Mkw2cTZ1Rm95S2psVERKQndFV2pIakcvRUc0S2lnTDdDTWd2MElyaFM4NTg9/metallica-fadetoblack_(Krolik.biz).mp3"
+        },
+        {
+          "id": "3",
+          "albumId": "1",
+          "name": "Orion",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdVFiRmtWTk8xZEIyNnpXcWpmREppT1B1cWNrZFdSLzROeFIxUkFUT2Y3ZGZTeHBnc0I5U0c3cWNiN2lIcy9YYms9/metallica-orion_(Krolik.biz).mp3"
+        },
+        {
+          "id": "4",
+          "albumId": "1",
+          "name": "The Unforgiven II",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd0dEUC9aV281SVRrSVBOV3NPdG1QdDlBa3BLWEFoSEVFeEhYa2ZlOE5mZTQ9/metallica-the-unforgiven-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "5",
+          "albumId": "1",
+          "name": "And Justice For All",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd25Jdm5HYml3Wll6QmNoTlU3SDJPY1o2ZWF4MkxQZVNEd0E4SnNMZTE4dzQ9/metallica-and-justice-for-all_(Krolik.biz).mp3"
+        },
+        {
+          "id": "6",
+          "albumId": "1",
+          "name": "The God That Failed",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV0ViWCtEaTVyY25yVmxINDVicVFCTGUvMkFRV2l3b0dKL3NkN25sZHFsaEg2dm9FMWNpMUw4SFo2M0lBUDdSRVU9/metallica-the-god-that-failed_(Krolik.biz).mp3"
+        },
+        {
+          "id": "7",
+          "albumId": "1",
+          "name": "Nothing else Metter",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVVd5cDRTT3V3T0MyK0xnNHFsZEp4RThaNWxPSkkzUXpHcnVoQk00bGJ0RmJCbjN3eEVvVUFsVDR1dm1Ua1gxWWM9/metallica-nothing-else-metter_(Krolik.biz).mp3"
+        },
+        {
+          "id": "8",
+          "albumId": "1",
+          "name": "The Memory Remains",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWkhFL0RwZzhvbEV5cVd6UFo4eEtvdjRXT2JMZk1Ia2YrUWhSZHhLQWE1Tjg9/metallica-the-memory-remains_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "metall"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "In Utero",
+      "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+      "performer": [
+        "Nirvana"
+      ],
+      "tracks": [
+        {
+          "id": "9",
+          "albumId": "2",
+          "name": "Hello, hello",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWmk4RTVRZExQWGRCdStVTjNsaXNnMStTY2lIM1ZFeE00MXF5WVlKanFzcUk9/nirvana-hello-hello-hello-how-low_(Krolik.biz).mp3"
+        },
+        {
+          "id": "10",
+          "albumId": "2",
+          "name": "Something In The Way",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQWHhqT0xBWDZvRTJKbjZHOGgrL3o1T1FJdnZBeWNRbzBlYlBBbFl4bXllcm92TXhDaUZPVGxTaGVGdlNHRkhyeGs9/nirvana-something-in-the-way_(Krolik.biz).mp3"
+        },
+        {
+          "id": "11",
+          "albumId": "2",
+          "name": "Smells Like A Teen Spirit",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVUo3T0hnUmM4Mmw0KytrSE9mWS96TWJFUFJxc2JIZHpIR0RjUEVzYi9yNTY3VmM2WDNJb0kzUTQ5NmY1TDZuVTQ9/nirvana-smells-like-a-teen-spirit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "12",
+          "albumId": "2",
+          "name": "Come As You Are",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV1RMNzU2dUJSZlBzYkFrOUhrYmFHcG56WXp6Rjh6WW8vMm9jbkw3cFNZdmpjcU9OM2xMZmVEZzkzeTRiRjBVNjA9/nirvana-come-as-you-are_(Krolik.biz).mp3"
+        },
+        {
+          "id": "13",
+          "albumId": "2",
+          "name": "Rape Me",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV3NiOHRlbW9WNXNuM0FzZGVCQ3lMRkhZemFSNmNBQnU5eTQ4dGJHMDV2TW9BSzFhWlhsOWt1cEJNQzFQUzlGSm89/nirvana-rape-me_(Krolik.biz).mp3"
+        },
+        {
+          "id": "14",
+          "albumId": "2",
+          "name": "Heart-shaped box",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVXVNM0k3bTcvOERjc3RqREtrUFF2YnBQL245OWdTc3RLc1Ezb3k1b3NLYXFrRnhvbWRhZG1HcG5iYWNFY081L289/nirvana-heart-shaped-box_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "2",
+          "albumId": "2",
+          "name": "alternative"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Return to Forever",
+      "poster": "https://avatars.yandex.net/get-music-content/33216/2157d36c.a.65048-1/400x400",
+      "performer": [
+        "Scorpions"
+      ],
+      "tracks": [
+        {
+          "id": "15",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVlE0SlRHSWhFNGpNQUJNWVFpOEt3amhhWnhnQjU1dG1Ub2pGV3VMa3kybjZEc1p6OXVtOTlRN3ZRYU8vRm9KOHc9/scorpions-does-anyone-know_(Krolik.biz).mp3"
+        },
+        {
+          "id": "16",
+          "albumId": "3",
+          "name": "Are you the one",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdTRXOUt1cVFJYUhENE1RZUZpclNVZjljT0NCdVEyaCt0SmpySVVHUzByZkZxU3lraFZsUGtsTjQ0Qkp6UTlRRjQ9/scorpions-are-you-the-one_(Krolik.biz).mp3"
+        },
+        {
+          "id": "17",
+          "albumId": "3",
+          "name": "Wind Of Change",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdjJWVklJay9qRXJOanI3aUwybWJ4N1pqWmt2b2duT2pxa2Rna2JJZVNTRGZJTEIrUVhuL0hXU0RPcXZsc1FwaEU9/scorpions-wind-of-change_(Krolik.biz).mp3"
+        },
+        {
+          "id": "18",
+          "albumId": "3",
+          "name": "Robot man",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpc3lFM1IzTUlocjdGS1pBRzBLV2hJMk04Zlhmd2lVQWxXZG1MbFhKSGNyV0lTclBPZVRsVUZmY2NJdThqNW82b1k9/scorpions-robot-man_(Krolik.biz).mp3"
+        },
+        {
+          "id": "19",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdVU5Q24vTUptcWtKekxtTTdCem93YkVXei8wdnRZbld3ZWoyNDhMaHl5QjBwd3p0dHhVUXYydm1QQVkyUjByaWc9/scorpions-where-the-river-flows_(Krolik.biz).mp3"
+        },
+        {
+          "id": "20",
+          "albumId": "3",
+          "name": "Maybe I Maybe You",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdkFnU3ZVUW5Qbzh6RmVFZlpEanovNzhEZVFBU2ZQdTN6aVlxc3MwQXFudElrTDVLNHl0RlJqaWFJWXVTWHpSalk9/scorpions-maybe-i-maybe-you_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "3",
+          "albumId": "3",
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Brandenburg Concertos",
+      "poster": "https://avatars.yandex.net/get-music-content/33216/5e5095f8.a.52134-1/400x400",
+      "performer": [
+        "Иоганн Себастьян Бах"
+      ],
+      "tracks": [
+        {
+          "id": "21",
+          "albumId": "4",
+          "name": "Canon Trias Harmonica",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdUlMNWYrREtPU0hLanl0UDlYMlBYVmUwNlk2QzZJRnRDbDBzZ0p0TnRNTzR2WFpPSmg3WE1EYVppUlRacUU2a2M9/bach-canons-goebel-01-canon-trias-harmonica-a-8-bwv-1072_(Krolik.biz).mp3"
+        },
+        {
+          "id": "22",
+          "albumId": "4",
+          "name": "Concerto in F minor",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR2NXR0pINi9pOWkvVVFDMFN1Tm5RZVJpOHZ5SFV1UUxyMnd1VmtWdW1VZDNIQjRXeXEwcGJ2ZHlHNEZwT2VBSmM9/bach-concerto-in-f-minor-bwv-1056-fedotov-petrova-1-allegro_(Krolik.biz).mp3"
+        },
+        {
+          "id": "23",
+          "albumId": "4",
+          "name": "Orchestral Suite 2",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR1RkWXh6UWdGRW0rNzl5VFUyN3RITW5uU0ZrRWJNU3o0Y3V2SW14eGErdmNOdGxJdlhTTjA1U3hPMzJmdlo4dDQ9/bach-orchestral-suite-2-h-moll-bwv-1067-k.-richter-4-bourree-i-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "24",
+          "albumId": "4",
+          "name": "Brandenburg Concerto 4 G",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRjUyQ2JhMmpPZ2lOb0c3Ym93OTZsUXZKd2U2ZEtoUEtycUh6YTRSdGlGU0RXcHFwMWRhbjhpbWdybUluaGFZQ1E9/bach-brandenburg-concerto-4-g-bwv-1049-boyd-1-allegro_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "4",
+          "albumId": "4",
+          "name": "classic"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Red Lights",
+      "poster": "https://avatars.yandex.net/get-music-content/97284/b67aca4b.a.4343456-1/400x400",
+      "performer": [
+        "Tiesto"
+      ],
+      "tracks": [
+        {
+          "id": "25",
+          "albumId": "5",
+          "name": "Edward Carnby",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFZmaUY3bnc2Qmt3VWI0ODAwaUw4Q2FMRmR3akt6cEFzQWNDQjNkOVVoVjBHbDFGNUxUN3ArajhpM1FQUVRIYVk9/tiesto-pres.-alone-in-the-dark-inferno-edward-carnby-tiesto-radio-edit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "26",
+          "albumId": "5",
+          "name": "Century",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRlBMR3JWLzR3cXN1YzRNVHFXM1VpV1UreFpxU054Y0lMODgwTHRVMElpNnovbXZYRmxiQnVGV3ZESDkzSGxTSGM9/tiesto-feat.-calvin-harris-century-tiesto-moska-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "27",
+          "albumId": "5",
+          "name": "In My Memory",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFp2WitjcVZYTWc2UTV1SHhadVNyZnE2WDJncjFUSWhIVm9hU1MrY0c5SDNvM0lybGJIejRJSm5FMlk2SDlsNTg9/tiesto-maximal-crazy-by-tiesto-derek-sabiston-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "28",
+          "albumId": "5",
+          "name": "Surrounded By Light",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRXNpVUVnUlRNVjdSTUZDTFV6djJ2SWIxR2x5NFFkVzhLWUEvT0VFT0ErSllmaHdrUVkwbk9MdzVYRDVsVVZRN0k9/tiesto-surrounded-by-light-extended-tiesto-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "29",
+          "albumId": "5",
+          "name": "Adagio 4 Strings",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFJwZlhMd1VoV3lxVktkRlFXbTVVT0pOSWtkbDZWU2MrRURxd3RxMEJkdW5yQTdYTXQrWDJPQ2VCM1NKd0M0R1E9/tiesto-adagio-4-strings-blezi-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "30",
+          "albumId": "5",
+          "name": "The World Is Maximal Crazy",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRUlPd09nMWhhNGloTlg0eWRTdGllVHM5b0lGVXo1UUtGWnNMbGhyUVZZZS9hNEZQaXF6NlFPNVBQR1U3eU1YRzQ9/tiesto-david-guetta-the-world-is-maximal-crazy-tigran-oganezov-mashup_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "5",
+          "albumId": "5",
+          "name": "dance"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "name": "...And Justice For All",
+      "poster": "https://avatars.yandex.net/get-music-content/95061/530a4605.a.3935391-1/400x400",
+      "performer": [
+        "Metallica"
+      ],
+      "tracks": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "Astronomy",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrdVFmZkRqVklWNlBkdHJKU3U5UHNnOUR4UlZvdnplMlEzOUovejFKeGsxVXpOZUw5bVhsYkhuL05wc0NMd0x5Vzg9/metallica-astronomy_(Krolik.biz).mp3"
+        },
+        {
+          "id": "2",
+          "albumId": "1",
+          "name": "Fade Tor Black",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrditXN21iOFUwYTMwbmd6SUx5L1N2Mkw2cTZ1Rm95S2psVERKQndFV2pIakcvRUc0S2lnTDdDTWd2MElyaFM4NTg9/metallica-fadetoblack_(Krolik.biz).mp3"
+        },
+        {
+          "id": "3",
+          "albumId": "1",
+          "name": "Orion",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdVFiRmtWTk8xZEIyNnpXcWpmREppT1B1cWNrZFdSLzROeFIxUkFUT2Y3ZGZTeHBnc0I5U0c3cWNiN2lIcy9YYms9/metallica-orion_(Krolik.biz).mp3"
+        },
+        {
+          "id": "4",
+          "albumId": "1",
+          "name": "The Unforgiven II",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd0dEUC9aV281SVRrSVBOV3NPdG1QdDlBa3BLWEFoSEVFeEhYa2ZlOE5mZTQ9/metallica-the-unforgiven-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "5",
+          "albumId": "1",
+          "name": "And Justice For All",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd25Jdm5HYml3Wll6QmNoTlU3SDJPY1o2ZWF4MkxQZVNEd0E4SnNMZTE4dzQ9/metallica-and-justice-for-all_(Krolik.biz).mp3"
+        },
+        {
+          "id": "6",
+          "albumId": "1",
+          "name": "The God That Failed",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV0ViWCtEaTVyY25yVmxINDVicVFCTGUvMkFRV2l3b0dKL3NkN25sZHFsaEg2dm9FMWNpMUw4SFo2M0lBUDdSRVU9/metallica-the-god-that-failed_(Krolik.biz).mp3"
+        },
+        {
+          "id": "7",
+          "albumId": "1",
+          "name": "Nothing else Metter",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVVd5cDRTT3V3T0MyK0xnNHFsZEp4RThaNWxPSkkzUXpHcnVoQk00bGJ0RmJCbjN3eEVvVUFsVDR1dm1Ua1gxWWM9/metallica-nothing-else-metter_(Krolik.biz).mp3"
+        },
+        {
+          "id": "8",
+          "albumId": "1",
+          "name": "The Memory Remains",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWkhFL0RwZzhvbEV5cVd6UFo4eEtvdjRXT2JMZk1Ia2YrUWhSZHhLQWE1Tjg9/metallica-the-memory-remains_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "metall"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Transmission",
+      "poster": "https://avatars.yandex.net/get-music-content/38044/630bd65f.a.3185690-1/400x400",
+      "performer": [
+        "Nirvana"
+      ],
+      "tracks": [
+        {
+          "id": "9",
+          "albumId": "2",
+          "name": "Hello, hello",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/630bd65f.a.3185690-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWmk4RTVRZExQWGRCdStVTjNsaXNnMStTY2lIM1ZFeE00MXF5WVlKanFzcUk9/nirvana-hello-hello-hello-how-low_(Krolik.biz).mp3"
+        },
+        {
+          "id": "10",
+          "albumId": "2",
+          "name": "Something In The Way",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQWHhqT0xBWDZvRTJKbjZHOGgrL3o1T1FJdnZBeWNRbzBlYlBBbFl4bXllcm92TXhDaUZPVGxTaGVGdlNHRkhyeGs9/nirvana-something-in-the-way_(Krolik.biz).mp3"
+        },
+        {
+          "id": "11",
+          "albumId": "2",
+          "name": "Smells Like A Teen Spirit",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVUo3T0hnUmM4Mmw0KytrSE9mWS96TWJFUFJxc2JIZHpIR0RjUEVzYi9yNTY3VmM2WDNJb0kzUTQ5NmY1TDZuVTQ9/nirvana-smells-like-a-teen-spirit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "12",
+          "albumId": "2",
+          "name": "Come As You Are",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV1RMNzU2dUJSZlBzYkFrOUhrYmFHcG56WXp6Rjh6WW8vMm9jbkw3cFNZdmpjcU9OM2xMZmVEZzkzeTRiRjBVNjA9/nirvana-come-as-you-are_(Krolik.biz).mp3"
+        },
+        {
+          "id": "13",
+          "albumId": "2",
+          "name": "Rape Me",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV3NiOHRlbW9WNXNuM0FzZGVCQ3lMRkhZemFSNmNBQnU5eTQ4dGJHMDV2TW9BSzFhWlhsOWt1cEJNQzFQUzlGSm89/nirvana-rape-me_(Krolik.biz).mp3"
+        },
+        {
+          "id": "14",
+          "albumId": "2",
+          "name": "Heart-shaped box",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVXVNM0k3bTcvOERjc3RqREtrUFF2YnBQL245OWdTc3RLc1Ezb3k1b3NLYXFrRnhvbWRhZG1HcG5iYWNFY081L289/nirvana-heart-shaped-box_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "2",
+          "albumId": "2",
+          "name": "alternative"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Crazy World",
+      "poster": "https://avatars.yandex.net/get-music-content/49876/43f9148e.a.3175-1/400x400",
+      "performer": [
+        "Scorpions"
+      ],
+      "tracks": [
+        {
+          "id": "15",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVlE0SlRHSWhFNGpNQUJNWVFpOEt3amhhWnhnQjU1dG1Ub2pGV3VMa3kybjZEc1p6OXVtOTlRN3ZRYU8vRm9KOHc9/scorpions-does-anyone-know_(Krolik.biz).mp3"
+        },
+        {
+          "id": "16",
+          "albumId": "3",
+          "name": "Are you the one",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdTRXOUt1cVFJYUhENE1RZUZpclNVZjljT0NCdVEyaCt0SmpySVVHUzByZkZxU3lraFZsUGtsTjQ0Qkp6UTlRRjQ9/scorpions-are-you-the-one_(Krolik.biz).mp3"
+        },
+        {
+          "id": "17",
+          "albumId": "3",
+          "name": "Wind Of Change",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdjJWVklJay9qRXJOanI3aUwybWJ4N1pqWmt2b2duT2pxa2Rna2JJZVNTRGZJTEIrUVhuL0hXU0RPcXZsc1FwaEU9/scorpions-wind-of-change_(Krolik.biz).mp3"
+        },
+        {
+          "id": "18",
+          "albumId": "3",
+          "name": "Robot man",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpc3lFM1IzTUlocjdGS1pBRzBLV2hJMk04Zlhmd2lVQWxXZG1MbFhKSGNyV0lTclBPZVRsVUZmY2NJdThqNW82b1k9/scorpions-robot-man_(Krolik.biz).mp3"
+        },
+        {
+          "id": "19",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdVU5Q24vTUptcWtKekxtTTdCem93YkVXei8wdnRZbld3ZWoyNDhMaHl5QjBwd3p0dHhVUXYydm1QQVkyUjByaWc9/scorpions-where-the-river-flows_(Krolik.biz).mp3"
+        },
+        {
+          "id": "20",
+          "albumId": "3",
+          "name": "Maybe I Maybe You",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdkFnU3ZVUW5Qbzh6RmVFZlpEanovNzhEZVFBU2ZQdTN6aVlxc3MwQXFudElrTDVLNHl0RlJqaWFJWXVTWHpSalk9/scorpions-maybe-i-maybe-you_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "3",
+          "albumId": "3",
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Famous Classics",
+      "poster": "https://avatars.yandex.net/get-music-content/118603/e6a7ec8e.a.5513200-1/400x400",
+      "performer": [
+        "Иоганн Себастьян Бах"
+      ],
+      "tracks": [
+        {
+          "id": "21",
+          "albumId": "4",
+          "name": "Canon Trias Harmonica",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdUlMNWYrREtPU0hLanl0UDlYMlBYVmUwNlk2QzZJRnRDbDBzZ0p0TnRNTzR2WFpPSmg3WE1EYVppUlRacUU2a2M9/bach-canons-goebel-01-canon-trias-harmonica-a-8-bwv-1072_(Krolik.biz).mp3"
+        },
+        {
+          "id": "22",
+          "albumId": "4",
+          "name": "Concerto in F minor",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR2NXR0pINi9pOWkvVVFDMFN1Tm5RZVJpOHZ5SFV1UUxyMnd1VmtWdW1VZDNIQjRXeXEwcGJ2ZHlHNEZwT2VBSmM9/bach-concerto-in-f-minor-bwv-1056-fedotov-petrova-1-allegro_(Krolik.biz).mp3"
+        },
+        {
+          "id": "23",
+          "albumId": "4",
+          "name": "Orchestral Suite 2",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR1RkWXh6UWdGRW0rNzl5VFUyN3RITW5uU0ZrRWJNU3o0Y3V2SW14eGErdmNOdGxJdlhTTjA1U3hPMzJmdlo4dDQ9/bach-orchestral-suite-2-h-moll-bwv-1067-k.-richter-4-bourree-i-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "24",
+          "albumId": "4",
+          "name": "Brandenburg Concerto 4 G",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRjUyQ2JhMmpPZ2lOb0c3Ym93OTZsUXZKd2U2ZEtoUEtycUh6YTRSdGlGU0RXcHFwMWRhbjhpbWdybUluaGFZQ1E9/bach-brandenburg-concerto-4-g-bwv-1049-boyd-1-allegro_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "4",
+          "albumId": "4",
+          "name": "classic"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "name": "The Loves We Lost",
+      "poster": "https://avatars.yandex.net/get-music-content/34131/46546af4.a.574288-1/400x400",
+      "performer": [
+        "Tiesto"
+      ],
+      "tracks": [
+        {
+          "id": "25",
+          "albumId": "5",
+          "name": "Edward Carnby",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFZmaUY3bnc2Qmt3VWI0ODAwaUw4Q2FMRmR3akt6cEFzQWNDQjNkOVVoVjBHbDFGNUxUN3ArajhpM1FQUVRIYVk9/tiesto-pres.-alone-in-the-dark-inferno-edward-carnby-tiesto-radio-edit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "26",
+          "albumId": "5",
+          "name": "Century",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRlBMR3JWLzR3cXN1YzRNVHFXM1VpV1UreFpxU054Y0lMODgwTHRVMElpNnovbXZYRmxiQnVGV3ZESDkzSGxTSGM9/tiesto-feat.-calvin-harris-century-tiesto-moska-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "27",
+          "albumId": "5",
+          "name": "In My Memory",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFp2WitjcVZYTWc2UTV1SHhadVNyZnE2WDJncjFUSWhIVm9hU1MrY0c5SDNvM0lybGJIejRJSm5FMlk2SDlsNTg9/tiesto-maximal-crazy-by-tiesto-derek-sabiston-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "28",
+          "albumId": "5",
+          "name": "Surrounded By Light",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRXNpVUVnUlRNVjdSTUZDTFV6djJ2SWIxR2x5NFFkVzhLWUEvT0VFT0ErSllmaHdrUVkwbk9MdzVYRDVsVVZRN0k9/tiesto-surrounded-by-light-extended-tiesto-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "29",
+          "albumId": "5",
+          "name": "Adagio 4 Strings",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFJwZlhMd1VoV3lxVktkRlFXbTVVT0pOSWtkbDZWU2MrRURxd3RxMEJkdW5yQTdYTXQrWDJPQ2VCM1NKd0M0R1E9/tiesto-adagio-4-strings-blezi-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "30",
+          "albumId": "5",
+          "name": "The World Is Maximal Crazy",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRUlPd09nMWhhNGloTlg0eWRTdGllVHM5b0lGVXo1UUtGWnNMbGhyUVZZZS9hNEZQaXF6NlFPNVBQR1U3eU1YRzQ9/tiesto-david-guetta-the-world-is-maximal-crazy-tigran-oganezov-mashup_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "5",
+          "albumId": "5",
+          "name": "dance"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Death Magnetic",
+      "poster": "https://avatars.yandex.net/get-music-content/114728/285b5880.a.7671-2/400x400",
+      "performer": [
+        "Metallica"
+      ],
+      "tracks": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "Astronomy",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrdVFmZkRqVklWNlBkdHJKU3U5UHNnOUR4UlZvdnplMlEzOUovejFKeGsxVXpOZUw5bVhsYkhuL05wc0NMd0x5Vzg9/metallica-astronomy_(Krolik.biz).mp3"
+        },
+        {
+          "id": "2",
+          "albumId": "1",
+          "name": "Fade Tor Black",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/WnA4aFRnNXYzUFRadjUrdDVBNVVLOUFTWUdDa1laL0U0cS9RU3hPNDhrditXN21iOFUwYTMwbmd6SUx5L1N2Mkw2cTZ1Rm95S2psVERKQndFV2pIakcvRUc0S2lnTDdDTWd2MElyaFM4NTg9/metallica-fadetoblack_(Krolik.biz).mp3"
+        },
+        {
+          "id": "3",
+          "albumId": "1",
+          "name": "Orion",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdVFiRmtWTk8xZEIyNnpXcWpmREppT1B1cWNrZFdSLzROeFIxUkFUT2Y3ZGZTeHBnc0I5U0c3cWNiN2lIcy9YYms9/metallica-orion_(Krolik.biz).mp3"
+        },
+        {
+          "id": "4",
+          "albumId": "1",
+          "name": "The Unforgiven II",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd0dEUC9aV281SVRrSVBOV3NPdG1QdDlBa3BLWEFoSEVFeEhYa2ZlOE5mZTQ9/metallica-the-unforgiven-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "5",
+          "albumId": "1",
+          "name": "And Justice For All",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/bEh1N0FRWGRSQ1lVcGE0bnRnVTFZUDM1bXZ4U1BKaGNOcDVnMGE3UkNVdm42T3VCOVcvS216cGVSTHdsMzVBd25Jdm5HYml3Wll6QmNoTlU3SDJPY1o2ZWF4MkxQZVNEd0E4SnNMZTE4dzQ9/metallica-and-justice-for-all_(Krolik.biz).mp3"
+        },
+        {
+          "id": "6",
+          "albumId": "1",
+          "name": "The God That Failed",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV0ViWCtEaTVyY25yVmxINDVicVFCTGUvMkFRV2l3b0dKL3NkN25sZHFsaEg2dm9FMWNpMUw4SFo2M0lBUDdSRVU9/metallica-the-god-that-failed_(Krolik.biz).mp3"
+        },
+        {
+          "id": "7",
+          "albumId": "1",
+          "name": "Nothing else Metter",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVVd5cDRTT3V3T0MyK0xnNHFsZEp4RThaNWxPSkkzUXpHcnVoQk00bGJ0RmJCbjN3eEVvVUFsVDR1dm1Ua1gxWWM9/metallica-nothing-else-metter_(Krolik.biz).mp3"
+        },
+        {
+          "id": "8",
+          "albumId": "1",
+          "name": "The Memory Remains",
+          "poster": "http://cdndl.zaycev.net/commonImage/70167_square250.jpg",
+          "performer": "Metallica",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWkhFL0RwZzhvbEV5cVd6UFo4eEtvdjRXT2JMZk1Ia2YrUWhSZHhLQWE1Tjg9/metallica-the-memory-remains_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "1",
+          "albumId": "1",
+          "name": "metall"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "With the Lights Out",
+      "poster": "https://avatars.yandex.net/get-music-content/28589/7f848468.a.1980067-1/400x400",
+      "performer": [
+        "Nirvana"
+      ],
+      "tracks": [
+        {
+          "id": "9",
+          "albumId": "2",
+          "name": "Hello, hello",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVWNUNFBxaVJHOHFLNTdZZ2dxQkMxWmk4RTVRZExQWGRCdStVTjNsaXNnMStTY2lIM1ZFeE00MXF5WVlKanFzcUk9/nirvana-hello-hello-hello-how-low_(Krolik.biz).mp3"
+        },
+        {
+          "id": "10",
+          "albumId": "2",
+          "name": "Something In The Way",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQWHhqT0xBWDZvRTJKbjZHOGgrL3o1T1FJdnZBeWNRbzBlYlBBbFl4bXllcm92TXhDaUZPVGxTaGVGdlNHRkhyeGs9/nirvana-something-in-the-way_(Krolik.biz).mp3"
+        },
+        {
+          "id": "11",
+          "albumId": "2",
+          "name": "Smells Like A Teen Spirit",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVUo3T0hnUmM4Mmw0KytrSE9mWS96TWJFUFJxc2JIZHpIR0RjUEVzYi9yNTY3VmM2WDNJb0kzUTQ5NmY1TDZuVTQ9/nirvana-smells-like-a-teen-spirit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "12",
+          "albumId": "2",
+          "name": "Come As You Are",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV1RMNzU2dUJSZlBzYkFrOUhrYmFHcG56WXp6Rjh6WW8vMm9jbkw3cFNZdmpjcU9OM2xMZmVEZzkzeTRiRjBVNjA9/nirvana-come-as-you-are_(Krolik.biz).mp3"
+        },
+        {
+          "id": "13",
+          "albumId": "2",
+          "name": "Rape Me",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQV3NiOHRlbW9WNXNuM0FzZGVCQ3lMRkhZemFSNmNBQnU5eTQ4dGJHMDV2TW9BSzFhWlhsOWt1cEJNQzFQUzlGSm89/nirvana-rape-me_(Krolik.biz).mp3"
+        },
+        {
+          "id": "14",
+          "albumId": "2",
+          "name": "Heart-shaped box",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Nirvana",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVXVNM0k3bTcvOERjc3RqREtrUFF2YnBQL245OWdTc3RLc1Ezb3k1b3NLYXFrRnhvbWRhZG1HcG5iYWNFY081L289/nirvana-heart-shaped-box_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "2",
+          "albumId": "2",
+          "name": "alternative"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Success",
+      "poster": "https://avatars.yandex.net/get-music-content/119639/d6741112.a.5396650-1/400x400",
+      "performer": [
+        "Scorpions"
+      ],
+      "tracks": [
+        {
+          "id": "15",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/VmhqclRYTmZ5bGVrSW9HM2pEaWROY2k4SlRuN3pBelR0QmtIK3RKWEJQVlE0SlRHSWhFNGpNQUJNWVFpOEt3amhhWnhnQjU1dG1Ub2pGV3VMa3kybjZEc1p6OXVtOTlRN3ZRYU8vRm9KOHc9/scorpions-does-anyone-know_(Krolik.biz).mp3"
+        },
+        {
+          "id": "16",
+          "albumId": "3",
+          "name": "Are you the one",
+          "poster": "https://avatars.yandex.net/get-music-content/49876/28fcc778.a.1592486-1/400x400",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdTRXOUt1cVFJYUhENE1RZUZpclNVZjljT0NCdVEyaCt0SmpySVVHUzByZkZxU3lraFZsUGtsTjQ0Qkp6UTlRRjQ9/scorpions-are-you-the-one_(Krolik.biz).mp3"
+        },
+        {
+          "id": "17",
+          "albumId": "3",
+          "name": "Wind Of Change",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdjJWVklJay9qRXJOanI3aUwybWJ4N1pqWmt2b2duT2pxa2Rna2JJZVNTRGZJTEIrUVhuL0hXU0RPcXZsc1FwaEU9/scorpions-wind-of-change_(Krolik.biz).mp3"
+        },
+        {
+          "id": "18",
+          "albumId": "3",
+          "name": "Robot man",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpc3lFM1IzTUlocjdGS1pBRzBLV2hJMk04Zlhmd2lVQWxXZG1MbFhKSGNyV0lTclBPZVRsVUZmY2NJdThqNW82b1k9/scorpions-robot-man_(Krolik.biz).mp3"
+        },
+        {
+          "id": "19",
+          "albumId": "3",
+          "name": "Does Anyone Know",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdVU5Q24vTUptcWtKekxtTTdCem93YkVXei8wdnRZbld3ZWoyNDhMaHl5QjBwd3p0dHhVUXYydm1QQVkyUjByaWc9/scorpions-where-the-river-flows_(Krolik.biz).mp3"
+        },
+        {
+          "id": "20",
+          "albumId": "3",
+          "name": "Maybe I Maybe You",
+          "poster": "https://avatars.yandex.net/get-music-content/49707/a1fb7dc4.p.90/m1000x1000",
+          "performer": "Scorpions",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdkFnU3ZVUW5Qbzh6RmVFZlpEanovNzhEZVFBU2ZQdTN6aVlxc3MwQXFudElrTDVLNHl0RlJqaWFJWXVTWHpSalk9/scorpions-maybe-i-maybe-you_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "3",
+          "albumId": "3",
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "The Art of Bach",
+      "poster": "https://avatars.yandex.net/get-music-content/149669/a68c6c40.a.5543692-1/400x400",
+      "performer": [
+        "Иоганн Себастьян Бах"
+      ],
+      "tracks": [
+        {
+          "id": "21",
+          "albumId": "4",
+          "name": "Canon Trias Harmonica",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/SFE5cWdkTVNPVDI2R3JuRUJZTjBFaWsrVnlOWHk0WkNDU3I3ZlFYYXBpdUlMNWYrREtPU0hLanl0UDlYMlBYVmUwNlk2QzZJRnRDbDBzZ0p0TnRNTzR2WFpPSmg3WE1EYVppUlRacUU2a2M9/bach-canons-goebel-01-canon-trias-harmonica-a-8-bwv-1072_(Krolik.biz).mp3"
+        },
+        {
+          "id": "22",
+          "albumId": "4",
+          "name": "Concerto in F minor",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR2NXR0pINi9pOWkvVVFDMFN1Tm5RZVJpOHZ5SFV1UUxyMnd1VmtWdW1VZDNIQjRXeXEwcGJ2ZHlHNEZwT2VBSmM9/bach-concerto-in-f-minor-bwv-1056-fedotov-petrova-1-allegro_(Krolik.biz).mp3"
+        },
+        {
+          "id": "23",
+          "albumId": "4",
+          "name": "Orchestral Suite 2",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqR1RkWXh6UWdGRW0rNzl5VFUyN3RITW5uU0ZrRWJNU3o0Y3V2SW14eGErdmNOdGxJdlhTTjA1U3hPMzJmdlo4dDQ9/bach-orchestral-suite-2-h-moll-bwv-1067-k.-richter-4-bourree-i-ii_(Krolik.biz).mp3"
+        },
+        {
+          "id": "24",
+          "albumId": "4",
+          "name": "Brandenburg Concerto 4 G",
+          "poster": "https://avatars.yandex.net/get-music-content/41288/77f649e6.p.1227/s400x400",
+          "performer": "Иоганн Себастьян Бах",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRjUyQ2JhMmpPZ2lOb0c3Ym93OTZsUXZKd2U2ZEtoUEtycUh6YTRSdGlGU0RXcHFwMWRhbjhpbWdybUluaGFZQ1E9/bach-brandenburg-concerto-4-g-bwv-1049-boyd-1-allegro_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "4",
+          "albumId": "4",
+          "name": "classic"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "The Island",
+      "poster": "https://avatars.yandex.net/get-music-content/49876/0460c993.a.101656-1/400x400",
+      "performer": [
+        "Tiesto"
+      ],
+      "tracks": [
+        {
+          "id": "25",
+          "albumId": "5",
+          "name": "Edward Carnby",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFZmaUY3bnc2Qmt3VWI0ODAwaUw4Q2FMRmR3akt6cEFzQWNDQjNkOVVoVjBHbDFGNUxUN3ArajhpM1FQUVRIYVk9/tiesto-pres.-alone-in-the-dark-inferno-edward-carnby-tiesto-radio-edit_(Krolik.biz).mp3"
+        },
+        {
+          "id": "26",
+          "albumId": "5",
+          "name": "Century",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRlBMR3JWLzR3cXN1YzRNVHFXM1VpV1UreFpxU054Y0lMODgwTHRVMElpNnovbXZYRmxiQnVGV3ZESDkzSGxTSGM9/tiesto-feat.-calvin-harris-century-tiesto-moska-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "27",
+          "albumId": "5",
+          "name": "In My Memory",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFp2WitjcVZYTWc2UTV1SHhadVNyZnE2WDJncjFUSWhIVm9hU1MrY0c5SDNvM0lybGJIejRJSm5FMlk2SDlsNTg9/tiesto-maximal-crazy-by-tiesto-derek-sabiston-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "28",
+          "albumId": "5",
+          "name": "Surrounded By Light",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRXNpVUVnUlRNVjdSTUZDTFV6djJ2SWIxR2x5NFFkVzhLWUEvT0VFT0ErSllmaHdrUVkwbk9MdzVYRDVsVVZRN0k9/tiesto-surrounded-by-light-extended-tiesto-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "29",
+          "albumId": "5",
+          "name": "Adagio 4 Strings",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqSFJwZlhMd1VoV3lxVktkRlFXbTVVT0pOSWtkbDZWU2MrRURxd3RxMEJkdW5yQTdYTXQrWDJPQ2VCM1NKd0M0R1E9/tiesto-adagio-4-strings-blezi-remix_(Krolik.biz).mp3"
+        },
+        {
+          "id": "30",
+          "albumId": "5",
+          "name": "The World Is Maximal Crazy",
+          "poster": "https://avatars.yandex.net/get-music-content/38044/3ddab2da.a.389931-1/400x400",
+          "performer": "Tiesto",
+          "url": "https://krolik.sunproxy.net/listen/cW9PRy9WUlNCT1dqODBSNDZoZ0RpaUV4SFltbFVUWkFuR3hqellmRUlqRUlPd09nMWhhNGloTlg0eWRTdGllVHM5b0lGVXo1UUtGWnNMbGhyUVZZZS9hNEZQaXF6NlFPNVBQR1U3eU1YRzQ9/tiesto-david-guetta-the-world-is-maximal-crazy-tigran-oganezov-mashup_(Krolik.biz).mp3"
+        }
+      ],
+      "genre": [
+        {
+          "id": "5",
+          "albumId": "5",
+          "name": "dance"
+        }
+      ]
+    }
+  ]
+}
