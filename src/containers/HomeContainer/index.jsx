@@ -50,7 +50,7 @@ class HomeContainer extends Component {
 
   render() {
     const { loadingAlbums, loadingCategories } = this.state;
-    if (loadingAlbums && loadingCategories) return <Spinner />;
+    if (loadingAlbums || loadingCategories) return <Spinner />;
 
     return <Home {...this.props} />;
   }
