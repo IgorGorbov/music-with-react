@@ -45,5 +45,6 @@ chrome-user-data
 *.swo
 
 .prettierrc
-db.json
-albums.json
+
+src/api/db.json
+src/api/albums.json
