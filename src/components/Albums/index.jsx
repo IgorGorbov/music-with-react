@@ -38,14 +38,16 @@ const Albums = ({
             </div>
           ))
         : null}
-      <Button
-        className="load-more"
-        onClick={() => getMoreAlbums(5)}
-        color="info"
-        disabled={albumsCount === currentCountAlbums}
-      >
-        Show more albums
-      </Button>
+        <div className="load-more-container">
+          <Button
+            className="load-more"
+            onClick={() => getMoreAlbums(5)}
+            color="info"
+            disabled={albumsCount === currentCountAlbums}
+          >
+            Show more albums
+          </Button>
+        </div>
     </div>
   );
 };

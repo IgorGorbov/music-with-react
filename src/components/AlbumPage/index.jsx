@@ -13,7 +13,7 @@ class AlbumPage extends Component {
   static propTypes = {
     player: PropTypes.object.isRequired,
     album: PropTypes.object,
-    playingIndex: PropTypes.string,
+    playingIndex: PropTypes.number,
     tracks: PropTypes.array.isRequired,
     likedAlbums: PropTypes.array,
     toggleVolume: PropTypes.func,
@@ -60,6 +60,7 @@ class AlbumPage extends Component {
 
   render() {
     const { album, player, tracks, likedAlbums, toggleLikeAlbum } = this.props;
+
     if (!album) return <Redirect to="/" />;
 
     const isLiked = likedAlbums.includes(album.id);

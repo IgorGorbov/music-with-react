@@ -31,7 +31,9 @@
 .album-card:hover .album-icon-play {
   opacity: 1; }
 
-.load-more {
-  color: red;
-  background-color: red;
-  margin: 0 auto; }
+.load-more-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70px; }
+  .load-more-container .load-more {
+    margin: 0 auto; }

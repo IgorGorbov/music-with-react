@@ -30,7 +30,7 @@ const Album = ({ id, name, performer, genre, poster }) => {
 };
 
 Album.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   performer: PropTypes.array.isRequired,
   genre: PropTypes.array.isRequired,

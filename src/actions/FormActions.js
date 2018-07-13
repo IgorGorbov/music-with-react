@@ -48,7 +48,7 @@ export const formAsyncValidation = () => async (dispatch, getState) => {
 
     if (typeForm === FORM_LOGIN) {
       const isValidate = currentUser
-        ? currentUser.password === password
+        ? String(currentUser.password) === String(password)
         : false;
 
       if (isValidate) {

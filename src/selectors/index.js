@@ -21,7 +21,7 @@ export const getAlbums = state => state.albums.items;
 export const getAlbumById = createSelector(
   getAlbums,
   (state, id) => id,
-  (albums, id) => albums.find(item => item.id === id),
+  (albums, id) => albums.find(item => item.id === Number(id)),
 );
 
 export const getPlayingIndex = state => state.player.playingIndex;

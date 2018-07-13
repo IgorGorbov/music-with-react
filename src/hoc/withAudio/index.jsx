@@ -54,8 +54,13 @@ const Audio = InnerComponent => {
     }
 
     onEnded() {
-      const { playNextSong } = this.props;
-      playNextSong();
+      const { playNextSong, player } = this.props;
+      const { repeat } = player;
+      if (repeat) {
+          this.changeCurrentTime(0);
+          this.togglePlay();
+      }
+      else playNextSong();
     }
 
     togglePlay() {

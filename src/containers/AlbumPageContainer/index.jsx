@@ -47,7 +47,7 @@ AlbumPageContainer.propTypes = {
   user: PropTypes.object,
   album: PropTypes.object,
   location: PropTypes.object.isRequired,
-  playingIndex: PropTypes.string,
+  playingIndex: PropTypes.number,
   tracks: PropTypes.array.isRequired,
   likedAlbums: PropTypes.array,
   toggleVolume: PropTypes.func,
