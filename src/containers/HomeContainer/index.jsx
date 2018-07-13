@@ -12,10 +12,11 @@ import {
   fetchEntities,
   selectCategory,
   selectFavoriteAlbums,
+  getMoreAlbums,
 } from '../../actions/EntitiesActions';
 import { onSelectNewAlbum } from '../../actions/PlayListActions';
 
-import { getEntities } from '../../selectors';
+import { getEntities, getCountAlbums, getAlbumsLength } from '../../selectors';
 
 import Home from '../../components/HomePage';
 import Spinner from '../../components/Spinner';
@@ -23,6 +24,8 @@ import Spinner from '../../components/Spinner';
 class HomeContainer extends Component {
   static propTypes = {
     albums: PropTypes.array.isRequired,
+    albumsCount: PropTypes.number.isRequired,
+    currentCountAlbums: PropTypes.number.isRequired,
     categories: PropTypes.object.isRequired,
     user: PropTypes.object,
     filtersCategory: PropTypes.array.isRequired,
@@ -30,6 +33,7 @@ class HomeContainer extends Component {
     onSelectNewAlbum: PropTypes.func.isRequired,
     selectFavoriteAlbums: PropTypes.func.isRequired,
     selectCategory: PropTypes.func.isRequired,
+    getMoreAlbums: PropTypes.func.isRequired,
   };
 
   state = { loadingAlbums: true, loadingCategories: true };
@@ -53,7 +57,12 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  albums: getEntities(state, 'albums'),
+  albums: getCountAlbums(
+    getEntities(state, 'albums'),
+    state.filters.countAlbums,
+  ),
+  albumsCount: getAlbumsLength(state),
+  currentCountAlbums: state.filters.countAlbums,
   categories: state.categories,
   user: state.session.user,
   filtersCategory: state.filters.category,
@@ -64,6 +73,7 @@ const mapDispatchToProps = {
   onSelectNewAlbum,
   selectFavoriteAlbums,
   selectCategory,
+  getMoreAlbums,
 };
 
 export default connect(

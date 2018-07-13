@@ -3,6 +3,7 @@ import {
   SEARCH,
   SELECT_CATEGORY,
   SELECT_FAVORITE_ALBUMS,
+  GET_MORE_ALBUMS,
 } from '../constants/ActionTypes';
 
 export const fetchEntities = (type, url) => async dispatch => {
@@ -35,4 +36,9 @@ export const selectCategory = category => ({
 
 export const selectFavoriteAlbums = () => ({
   type: SELECT_FAVORITE_ALBUMS,
+});
+
+export const getMoreAlbums = count => ({
+  type: GET_MORE_ALBUMS,
+  payload: count,
 });

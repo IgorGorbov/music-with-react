@@ -46,3 +46,4 @@ chrome-user-data
 
 .prettierrc
 db.json
+albums.json

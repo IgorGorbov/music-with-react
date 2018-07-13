@@ -30,3 +30,8 @@
 
 .album-card:hover .album-icon-play {
   opacity: 1; }
+
+.load-more {
+  color: red;
+  background-color: red;
+  margin: 0 auto; }

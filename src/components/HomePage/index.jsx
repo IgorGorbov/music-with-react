@@ -10,11 +10,14 @@ import './style.css';
 const Home = ({
   user,
   albums,
+  albumsCount,
+  currentCountAlbums,
   categories,
   filtersCategory,
   onSelectNewAlbum,
   selectCategory,
   selectFavoriteAlbums,
+  getMoreAlbums,
 }) => {
   return (
     <div className="home-page">
@@ -25,7 +28,13 @@ const Home = ({
         filtersCategory={filtersCategory}
         user={user}
       />
-      <Albums onSelectNewAlbum={onSelectNewAlbum} albums={albums} />
+      <Albums
+        getMoreAlbums={getMoreAlbums}
+        onSelectNewAlbum={onSelectNewAlbum}
+        albums={albums}
+        albumsCount={albumsCount}
+        currentCountAlbums={currentCountAlbums}
+      />
       {!user && <Modal />}
     </div>
   );
@@ -33,12 +42,15 @@ const Home = ({
 
 Home.propTypes = {
   albums: PropTypes.array.isRequired,
+  albumsCount: PropTypes.number.isRequired,
+  currentCountAlbums: PropTypes.number.isRequired,
   categories: PropTypes.object.isRequired,
   filtersCategory: PropTypes.array.isRequired,
   user: PropTypes.object,
   onSelectNewAlbum: PropTypes.func.isRequired,
   selectFavoriteAlbums: PropTypes.func.isRequired,
   selectCategory: PropTypes.func.isRequired,
+  getMoreAlbums: PropTypes.func.isRequired,
 };
 
 export default Home;

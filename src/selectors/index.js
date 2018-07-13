@@ -1,9 +1,14 @@
-export const getTypeForm = state => {
-  return state.routing.location.pathname === '/user/login' ||
-    state.routing.location.pathname === '/user/login/'
-    ? 'Login'
-    : 'Registration';
-};
+import { createSelector } from 'reselect';
+
+export const getPathname = state => state.routing.location.pathname;
+
+export const getTypeForm = createSelector(
+  getPathname,
+  pathname =>
+    pathname === '/user/login' || pathname === '/user/login/'
+      ? 'Login'
+      : 'Registration',
+);
 
 export const getPathForRedirect = state => {
   return state.routing.location.state
@@ -11,19 +16,29 @@ export const getPathForRedirect = state => {
     : '/';
 };
 
-export const getAlbumById = (state, id) => {
-  return state.albums.items.find(item => item.id === id);
-};
+export const getAlbums = state => state.albums.items;
+
+export const getAlbumById = createSelector(
+  getAlbums,
+  (state, id) => id,
+  (albums, id) => albums.find(item => item.id === id),
+);
 
 export const getPlayingIndex = state => state.player.playingIndex;
 
-export const getCurrentTrack = state => {
-  const playingIndex = state.player.playingIndex;
-  const currentTrack = state.playlist.items.find(
-    track => track.id === playingIndex,
-  );
-  return currentTrack ? currentTrack : state.track;
-};
+export const getPlaylist = state => state.playlist.items;
+
+export const getTrack = state => state.track;
+
+export const getCurrentTrack = createSelector(
+  getPlayingIndex,
+  getPlaylist,
+  getTrack,
+  (playingIndex, playlist, track) => {
+    const currentTrack = playlist.find(track => track.id === playingIndex);
+    return currentTrack ? currentTrack : track;
+  },
+);
 
 export const getLikedTracks = state => {
   const { session } = state;
@@ -75,7 +90,11 @@ export const getEntities = (state, entities) => {
   );
 };
 
+export const getCountAlbums = (albums, count) => albums.slice(0, count);
+
 export const getPlaylistItemsLength = state => state.playlist.items.length;
+
+export const getAlbumsLength = state => state.albums.items.length;
 
 export const getCurrentIndex = state => state.player.playingIndex;
 
@@ -106,15 +125,13 @@ export const getPrevIndex = state => {
   );
 
   const currentId = tracksIds.indexOf(playingIndex);
-  const prevtId = currentId - 1;
-  return currentId === 0 ? tracksIds[playlistItemsLength] : tracksIds[prevtId];
+  const prevId = currentId - 1;
+  return currentId === 0 ? tracksIds[playlistItemsLength] : tracksIds[prevId];
 };
 
 export const getRepeat = state => state.player.repeat;
 
 export const getShuffle = state => state.player.shuffle;
-
-export const getPlaylist = state => state.playlist.items;
 
 export const getShuffleIndex = state => {
   const playingIndex = getCurrentIndex(state);
