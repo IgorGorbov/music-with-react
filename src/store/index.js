@@ -7,11 +7,14 @@ import user from '../middlewares/user';
 import reducers from '../reducers';
 import history from '../history';
 
-const middleware = routerMiddleware(history);
-
-const store = createStore(
-  reducers,
-  composeWithDevTools(applyMiddleware(middleware, thunk, user)),
-);
+let middleware;
+if (process && process.env && process.env.NODE_ENV === 'production') {
+  middleware = applyMiddleware(routerMiddleware(history), thunk, user);
+} else {
+  middleware = composeWithDevTools(
+    applyMiddleware(routerMiddleware(history), thunk, user),
+  );
+}
+const store = createStore(reducers, middleware);
 
 export default store;

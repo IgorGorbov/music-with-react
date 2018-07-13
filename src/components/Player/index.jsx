@@ -19,6 +19,7 @@ class Player extends Component {
     playNextSong: PropTypes.func.isRequired,
     playNextSongFromButton: PropTypes.func.isRequired,
     playPrevSong: PropTypes.func.isRequired,
+    togglePlay: PropTypes.func.isRequired,
     onPlay: PropTypes.func.isRequired,
     onPause: PropTypes.func.isRequired,
     onLoadedMetadata: PropTypes.func.isRequired,
@@ -34,20 +35,6 @@ class Player extends Component {
     return !!nextProps.track;
   }
 
-  togglePlay() {
-    const { player, onPlay, onPause } = this.props;
-    if (!player.trackUrl) return;
-
-    const audio = document.getElementById('audio');
-
-    if (audio.paused) {
-      audio.play();
-      onPlay();
-    } else {
-      audio.pause();
-      onPause();
-    }
-  }
 
   render() {
     const {
@@ -62,8 +49,9 @@ class Player extends Component {
       playPrevSong,
       toggleRepeat,
       toggleShuffle,
-      toggleVolume,
+      toggleMuted,
       toggleLikeTrack,
+      togglePlay
     } = this.props;
 
 
@@ -122,7 +110,7 @@ class Player extends Component {
           >
             <Fa icon="arrow-circle-left" size="2x" />
           </Button>
-          <Button onClick={() => this.togglePlay()} outline color="info">
+          <Button onClick={() => togglePlay()} outline color="info">
             <Fa icon={isPlaying ? 'stop-circle' : 'play-circle'} size="2x" />
           </Button>
           <Button onClick={() => playNextSongFromButton()} outline color="info">
@@ -130,7 +118,7 @@ class Player extends Component {
           </Button>
         </div>
         <div className="track-input-volume">
-          <Button onClick={() => toggleVolume()} outline color="info">
+          <Button onClick={() => toggleMuted()} outline color="info">
             <Fa icon={isMuted ? 'volume-off' : 'volume-up'} size="2x" />
           </Button>
           <VolumeInputRange
