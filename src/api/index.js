@@ -10,9 +10,6 @@ export const postData = async (url, data) => {
   return await axios.post(url, data).then(response => response);
 };
 
-//  Maryam.Kuhlman@gmail.com
-//  jS6wvEXfor6sZbz
-
 async function asyncValidation(validationData, typeForm) {
   const { email, password } = validationData;
   const users = await fetchData(SERVER_USERS_URL).then(users => users);

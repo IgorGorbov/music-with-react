@@ -2,11 +2,13 @@ import {
   SEARCH,
   SELECT_CATEGORY,
   SELECT_FAVORITE_ALBUMS,
+  GET_MORE_ALBUMS,
 } from '../constants/ActionTypes';
 
 const initialState = {
   search: '',
   category: [],
+  countAlbums: 10,
   isFavoriteAlbums: false,
 };
 
@@ -30,6 +32,12 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         isFavoriteAlbums: !state.isFavoriteAlbums,
       };
+    case GET_MORE_ALBUMS:
+      return {
+        ...state,
+        countAlbums: state.countAlbums + payload,
+      };
+
     default:
       return state;
   }

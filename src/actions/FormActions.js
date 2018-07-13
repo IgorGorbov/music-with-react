@@ -6,13 +6,13 @@ import {
   ASYNC_VALIDATION_START,
   ASYNC_VALIDATION_SUCCESS,
   ASYNC_VALIDATION_ERROR,
-  USER_LOGIN,
   USER_REGISTRATION_START,
 } from '../constants/ActionTypes';
 
 import { fetchData } from '../api';
 import { SERVER_USERS_URL } from '../constants/ApiConstants';
 import { FORM_LOGIN } from '../constants/Validate';
+import { userLogin } from './UserActions';
 
 export const formFieldChange = (field, value) => ({
   type: FORM_FIELD_CHANGE,
@@ -53,7 +53,7 @@ export const formAsyncValidation = () => async (dispatch, getState) => {
 
       if (isValidate) {
         dispatch({ type: ASYNC_VALIDATION_SUCCESS });
-        dispatch({ type: USER_LOGIN, payload: currentUser });
+        dispatch(userLogin(currentUser));
       } else {
         const error = { fromServer: 'Incorrect email or password' };
         dispatch({ type: ASYNC_VALIDATION_ERROR, payload: error });

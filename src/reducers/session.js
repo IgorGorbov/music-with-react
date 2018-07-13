@@ -6,6 +6,7 @@ import {
   TOGGLE_LIKE_TRACK,
   TOGGLE_LIKE_ALBUM,
 } from '../constants/ActionTypes';
+import { DEFAULT_URL_IMG_AVATAR } from '../constants/User';
 
 const initialState = {
   user: null,
@@ -24,8 +25,7 @@ export default (state = initialState, { type, payload }) => {
         ...state,
         user: Object.assign(payload, {
           id: uid(10),
-          avatar:
-            'https://s3.amazonaws.com/uifaces/faces/twitter/edgarchris99/128.jpg',
+          avatar: DEFAULT_URL_IMG_AVATAR,
           likedTracks: [],
           likedAlbums: [],
           isAuthenticated: true,

@@ -1,0 +1,42 @@
+.album-card {
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  transition: all 0.35s ease;
+  position: relative;
+}
+.album-icon-play {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: all 0.35s ease;
+  font-size: 75px;
+  color: #5AB4E0;
+  z-index: 20;
+  opacity: 0;
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+}
+.album-card:hover {
+  .album-icon-play {
+    opacity: 1;
+  }
+}
+.load-more {
+  color: red;
+  background-color: red;
+  margin: 0 auto;
+}
