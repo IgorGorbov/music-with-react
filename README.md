@@ -15,3 +15,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 * reselect
 
 __Demo:__ [https://music-player-react.herokuapp.com/](https://music-player-react.herokuapp.com/)
+
+#### Test user:
+##### login: reactJS@gmail.com <br>
+##### password: reactcool

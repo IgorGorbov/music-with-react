@@ -1,11 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
+import styled from 'styled-components';
 import InputRange from 'react-input-range';
-import 'react-input-range/lib/css/index.css';
 
 import { formatSeconds } from '../../helpers/tracks';
-
-import './index.scss';
-import styled from 'styled-components';
 
 const RangeWrapper = styled.div`
   .input-range__track--active,
@@ -32,36 +29,33 @@ const RangeWrapper = styled.div`
   }
 `;
 
-class TrackInputRange extends Component {
+const TrackInputRange = props => {
+    const changeCurrentTime = currentTime => {
+        const { changeCurrentTime, onTimeUpdate } = props;
 
-  changeCurrentTime(currentTime) {
-    const { changeCurrentTime, onTimeUpdate } = this.props;
+        onTimeUpdate(currentTime);
+        changeCurrentTime(currentTime);
+    };
 
-    onTimeUpdate(currentTime);
-    changeCurrentTime(currentTime);
-  }
-
-  render() {
-    const { player } = this.props;
+    const { player } = props;
     const { duration, currentTime } = player;
 
     return (
-      <form className="form">
-        <RangeWrapper>
-          <InputRange
-            slider={'red'}
-            maxValue={duration > 0 ? duration : 1}
-            minValue={0}
-            formatLabel={currentTime => formatSeconds(currentTime)}
-            value={currentTime}
-            onChange={currentTime => this.changeCurrentTime(currentTime)}
-            step={1}
-          />
-          <span className="currentTime">{formatSeconds(currentTime)}</span>
-        </RangeWrapper>
-      </form>
+        <form className="form">
+            <RangeWrapper>
+                <InputRange
+                    slider={'red'}
+                    maxValue={duration > 0 ? duration : 1}
+                    minValue={0}
+                    formatLabel={currentTime => formatSeconds(currentTime)}
+                    value={currentTime}
+                    onChange={currentTime => changeCurrentTime(currentTime)}
+                    step={1}
+                />
+                <span className="currentTime">{formatSeconds(currentTime)}</span>
+            </RangeWrapper>
+        </form>
     );
-  }
-}
+};
 
 export default TrackInputRange;

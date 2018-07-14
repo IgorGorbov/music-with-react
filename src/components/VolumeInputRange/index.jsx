@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import styled from 'styled-components';
 import InputRange from 'react-input-range';
 
 import { formatVolume } from '../../helpers/tracks';
-
-import './index.scss';
 
 const RangeWrapper = styled.div`
   .input-range__label--min,
@@ -20,16 +18,15 @@ const RangeWrapper = styled.div`
   }
 `;
 
-class VolumeInputRange extends Component {
-  onVolumeChange(volume) {
-    const { onVolumeChange, changeVolume } = this.props;
+const VolumeInputRange = props => {
+  const onVolumeChange = volume => {
+    const { onVolumeChange, changeVolume } = props;
     const muted = false;
     onVolumeChange(muted, volume);
     changeVolume(volume);
-  }
+  };
 
-  render() {
-    const { player } = this.props;
+    const { player } = props;
     const { volume, muted } = player;
     return (
       <form className="form">
@@ -39,14 +36,13 @@ class VolumeInputRange extends Component {
             maxValue={1}
             minValue={0}
             value={muted ? 0 : volume}
-            onChange={volume => this.onVolumeChange(volume)}
+            onChange={volume => onVolumeChange(volume)}
             formatLabel={volume => formatVolume(volume)}
             step={0.01}
           />
         </RangeWrapper>
       </form>
     );
-  }
-}
+};
 
 export default VolumeInputRange;
