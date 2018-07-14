@@ -48,3 +48,4 @@ chrome-user-data
 
 src/api/db.json
 src/api/albums.json
+test\.js
