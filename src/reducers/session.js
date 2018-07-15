@@ -9,20 +9,8 @@ import {
 } from '../constants/ActionTypes';
 import { DEFAULT_URL_IMG_AVATAR } from '../constants/User';
 
-// const initialState = {
-//   user: null,
-// };
 const initialState = {
-  user: {
-    id: '2',
-    name: 'Teresa',
-    avatar:
-      'https://s3.amazonaws.com/uifaces/faces/twitter/itsajimithing/128.jpg',
-    likedTracks: [],
-    likedAlbums: [],
-    email: 'Thalia.Collier@hotmail.com',
-    isAuthenticated: true,
-  },
+  user: null,
 };
 
 export default (state = initialState, { type, payload }) => {
