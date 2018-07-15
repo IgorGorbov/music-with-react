@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { getCurrentTrack, getLikedTracks } from '../../selectors';
+import { getCurrentTrack, getLiked } from '../../selectors';
 
 import {
   onPlayNewTrack,
@@ -28,7 +28,7 @@ const PlayerContainer = props =>
 const mapStateToProps = state => ({
   player: state.player,
   track: getCurrentTrack(state),
-  likedTracks: getLikedTracks(state),
+  likedTracks: getLiked(state, 'likedTracks'),
 });
 
 const mapDispatchToProps = {

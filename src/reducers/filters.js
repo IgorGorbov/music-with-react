@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import {
   SEARCH,
   SELECT_CATEGORY,
@@ -15,29 +16,25 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case SEARCH:
-      return {
-        ...state,
-        search: payload,
-      };
+      return R.assoc('search', payload, state);
     case SELECT_CATEGORY:
-      const isNewCategory = !state.category.includes(payload);
-      return {
-        ...state,
-        category: isNewCategory
-          ? [...state.category, payload]
-          : state.category.filter(cat => cat !== payload),
-      };
+      const isNewCategory = R.compose(
+        R.not,
+        R.contains(payload),
+        R.prop('category'),
+      )(state);
+      const category = isNewCategory
+        ? [...R.prop('category', state), payload]
+        : R.filter(cat => cat !== payload, R.prop('category', state));
+      return R.assoc('category', category, state);
     case SELECT_FAVORITE_ALBUMS:
-      return {
-        ...state,
-        isFavoriteAlbums: !state.isFavoriteAlbums,
-      };
+      return R.assoc(
+        'isFavoriteAlbums',
+        !R.prop('isFavoriteAlbums', state),
+        state,
+      );
     case GET_MORE_ALBUMS:
-      return {
-        ...state,
-        countAlbums: state.countAlbums + payload,
-      };
-
+      return R.assoc('countAlbums', R.prop('countAlbums', state) + payload);
     default:
       return state;
   }

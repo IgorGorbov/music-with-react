@@ -9,10 +9,11 @@ You can find the most recent version of this guide [here](https://github.com/fac
 ### The application is developed on JavaScript. 
 
 #### List of technologies:
-* React
+* react
 * redux
-* thunk
+* redux-thunk
 * reselect
+* ramda
 
 __Demo:__ [https://music-player-react.herokuapp.com/](https://music-player-react.herokuapp.com/)
 

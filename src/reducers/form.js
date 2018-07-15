@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import {
   FORM_FIELD_CHANGE,
   FORM_VALIDATION,
@@ -23,40 +24,28 @@ const initialState = {
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case FORM_FIELD_CHANGE:
-      return {
-        ...state,
-        [payload.field]: payload.value,
-      };
+      return R.assoc(payload.field, R.prop('value', payload), state);
     case FORM_VALIDATION:
-      return {
-        ...state,
-        error: payload.error,
-        isValid: payload.isValid,
-      };
+      return R.compose(
+        R.assoc('isValid', R.prop('isValid', payload)),
+        R.assoc('error', R.prop('error', payload)),
+      )(state);
     case ASYNC_VALIDATION_START:
-      return {
-        ...state,
-        Loading: true,
-      };
+      return R.assoc('Loading', true, state);
     case ASYNC_VALIDATION_SUCCESS:
-      return {
-        ...state,
-        isAsyncValid: true,
-        Loading: false,
-      };
+      return R.compose(
+        R.assoc('isAsyncValid', true),
+        R.assoc('Loading', false),
+      )(state);
     case ASYNC_VALIDATION_ERROR:
-      return {
-        ...state,
-        error: payload,
-        isValid: false,
-        isAsyncValid: false,
-        Loading: false,
-      };
+      return R.compose(
+        R.assoc('error', payload),
+        R.assoc('isValid', false),
+        R.assoc('isAsyncValid', false),
+        R.assoc('Loading', false),
+      )(state);
     case CHANGE_TYPE_FORM:
-      return {
-        ...initialState,
-        typeForm: payload,
-      };
+      return R.assoc('typeForm', payload, initialState);
     case FORM_CLEAN:
       return initialState;
     default:

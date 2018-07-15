@@ -1,117 +1,155 @@
+import * as R from 'ramda';
 import { createSelector } from 'reselect';
 
-export const getPathname = state => state.routing.location.pathname;
+export const getPathname = state =>
+  R.path(['routing', 'location', 'pathname'], state);
 
 export const getTypeForm = createSelector(
   getPathname,
   pathname =>
-    pathname === '/user/login' || pathname === '/user/login/'
+    R.equals(pathname, '/user/login') || R.equals(pathname, '/user/login/')
       ? 'Login'
       : 'Registration',
 );
 
 export const getPathForRedirect = state => {
-  return state.routing.location.state
-    ? state.routing.location.state.from.pathname
-    : '/';
+  return R.ifElse(
+    R.path(['routing', 'location', 'state']),
+    R.path(['routing', 'location', 'state', 'from', 'pathname']),
+    R.always('/'),
+  )(state);
 };
 
-export const getAlbums = state => state.albums.items;
+export const getAlbums = state => R.path(['albums', 'items'], state);
 
 export const getAlbumById = createSelector(
   getAlbums,
-  (state, id) => id,
-  (albums, id) => albums.find(item => item.id === Number(id)),
+  (state, id) => +id,
+  (albums, id) => R.find(R.propEq('id', id))(albums),
 );
 
-export const getPlayingIndex = state => state.player.playingIndex;
+export const getPlayingIndex = state =>
+  R.path(['player', 'playingIndex'], state);
 
-export const getPlaylist = state => state.playlist.items;
+export const getPlaylist = state => R.path(['playlist', 'items'], state);
 
-export const getTrack = state => state.track;
+export const getTrack = state => R.prop('track', state);
 
 export const getCurrentTrack = createSelector(
   getPlayingIndex,
   getPlaylist,
   getTrack,
   (playingIndex, playlist, track) => {
-    const currentTrack = playlist.find(track => track.id === playingIndex);
+    const currentTrack = R.find(R.propEq('id', playingIndex))(playlist);
     return currentTrack ? currentTrack : track;
   },
 );
 
-export const getLikedTracks = state => {
-  const { session } = state;
-  return session.user ? session.user.likedTracks : [];
-};
+export const getLiked = (state, entities) =>
+  R.ifElse(
+    R.path(['session', 'user']),
+    R.path(['session', 'user', entities]),
+    R.always([]),
+  )(state);
 
-export const getLikedAlbums = state => {
-  const { session } = state;
-  return session.user ? session.user.likedAlbums : [];
-};
+// export const getTracks = state => {
+//     const applySearch = item => {
+//         const isContains = param => R.contains(
+//             R.toLower(state.tracksPage.search),
+//             R.toLower(R.prop(param, item))
+//         );
+//
+//         return isContains('name') || isContains('group')
+//     };
+//     const {user} = state;
+//     if(user.selectCategory === 'Favorite')
+//         return R.compose(
+//             R.filter(applySearch),
+//             R.map(id => getTrackById(state, id))
+//         )(state.user.liked);
+//
+//     return R.compose(
+//         R.filter(applySearch),
+//         R.map(id => getTrackById(state, id))
+//     )(state.tracksPage.ids)
+// };
 
 export const getEntities = (state, entities) => {
   const search = item => {
-    const searchName = item.name
-      .toLowerCase()
-      .includes(state.filters.search.toLowerCase());
+    const itemName = R.toLower(R.prop('name', item));
+    const searchValue = R.toLower(R.path(['filters', 'search'], state));
+    const searchName = R.contains(searchValue, itemName);
 
-    const searchPerformer = Array.isArray(item.performer)
-      ? item.performer.some(p =>
-          p.toLowerCase().includes(state.filters.search.toLowerCase()),
-        )
-      : item.performer
-          .toLowerCase()
-          .includes(state.filters.search.toLowerCase());
+    const itemPerformer = R.prop('performer', item);
+    const searchPerformer = R.ifElse(
+      R.is(Array),
+      R.any(item => R.contains(searchValue, R.toLower(item))),
+      R.contains(searchValue),
+    )(itemPerformer);
 
     return searchName || searchPerformer;
   };
 
   const filterByCategory = item => {
-    const { category } = state.filters;
+    const category = R.path(['filters', 'category'], state);
     if (category.length > 0 && item.genre) {
-      const cat = item.genre.map(g => g.id);
-      return state.filters.category.includes(...cat);
+      const itemGenre = R.map(g => g.id, R.prop('genre', item));
+      return R.contains(...itemGenre, R.path(['filters', 'category'], state));
     }
     return true;
   };
 
   const filterByFavorite = item => {
-    const { isFavoriteAlbums } = state.filters;
-    if (isFavoriteAlbums && state.session.user) {
-      const { likedAlbums } = state.session.user;
-      return likedAlbums.includes(item.id);
+    const isFavoriteAlbums = R.path(['filters', 'isFavoriteAlbums'], state);
+    if (isFavoriteAlbums && R.path(['session', 'user'], state)) {
+      const likedAlbums = R.path(['session', 'user', 'likedAlbums'], state);
+      return R.contains(R.prop('id', item), likedAlbums);
     }
     return true;
   };
 
-  return state[entities].items.filter(
-    item => filterByCategory(item) && search(item) && filterByFavorite(item),
+  const items = R.path([entities, 'items'], state);
+  return R.filter(
+    item => search(item) && filterByCategory(item) && filterByFavorite(item),
+    items,
   );
 };
 
-export const getCountAlbums = (albums, count) => albums.slice(0, count);
+export const getCountAlbums = (albums, count) => R.slice(0, count, albums);
 
-export const getPlaylistItemsLength = state => state.playlist.items.length;
+export const getPlaylistItemsLength = state =>
+  R.compose(
+    R.length,
+    R.path(['playlist', 'items']),
+  )(state);
 
-export const getAlbumsLength = state => state.albums.items.length;
+export const getAlbumsLength = state =>
+  R.compose(
+    R.length,
+    R.path(['albums', 'items']),
+  )(state);
 
-export const getCurrentIndex = state => state.player.playingIndex;
+export const getCurrentIndex = state =>
+  R.path(['player', 'playingIndex'], state);
 
 export const getNextUrl = (state, id) => {
-  const { playlist } = state;
-  return playlist.items.find(item => item.id === id).url;
+  const playlist = R.path(['playlist', 'items'], state);
+  return R.compose(
+    R.prop('url'),
+    R.find(item => R.equals(item.id, id)),
+  )(playlist);
 };
 
 export const getNextIndex = state => {
   const playingIndex = getCurrentIndex(state);
   const playlistItemsLength = getPlaylistItemsLength(state) - 1;
-  const tracksIds = state.playlist.items.reduce(
+  const tracksIds = R.reduce(
     (ids, item) => [...ids, item.id],
     [],
+    R.path(['playlist', 'items'], state),
   );
 
-  const currentId = tracksIds.indexOf(playingIndex);
+  const currentId = R.indexOf(playingIndex, tracksIds);
   const nextId = currentId + 1;
   return currentId === playlistItemsLength ? tracksIds[0] : tracksIds[nextId];
 };
@@ -119,26 +157,27 @@ export const getNextIndex = state => {
 export const getPrevIndex = state => {
   const playingIndex = getCurrentIndex(state);
   const playlistItemsLength = getPlaylistItemsLength(state) - 1;
-  const tracksIds = state.playlist.items.reduce(
+  const tracksIds = R.reduce(
     (ids, item) => [...ids, item.id],
     [],
+    R.path(['playlist', 'items'], state),
   );
 
-  const currentId = tracksIds.indexOf(playingIndex);
+  const currentId = R.indexOf(playingIndex, tracksIds);
   const prevId = currentId - 1;
   return currentId === 0 ? tracksIds[playlistItemsLength] : tracksIds[prevId];
 };
 
-export const getRepeat = state => state.player.repeat;
+export const getRepeat = state => R.path(['player', 'repeat'], state);
 
-export const getShuffle = state => state.player.shuffle;
+export const getShuffle = state => R.path(['player', 'shuffle'], state);
 
 export const getShuffleIndex = state => {
   const playingIndex = getCurrentIndex(state);
   const playlistItemsLength = getPlaylistItemsLength(state);
   const playlist = getPlaylist(state);
   const randomIndex = Math.floor(Math.random() * playlistItemsLength);
-  const shuffleIndex = playlist[randomIndex].id;
+  const shuffleIndex = R.path([randomIndex, 'id'], playlist);
 
   if (playingIndex === shuffleIndex) {
     return getShuffleIndex(state);

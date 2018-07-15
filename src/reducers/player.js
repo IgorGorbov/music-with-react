@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import {
   PLAY_SONG,
   ON_LOAD_START,
@@ -27,66 +28,37 @@ const initialState = {
 const player = (state = initialState, { type, payload }) => {
   switch (type) {
     case PLAY_SONG:
-      return {
-        ...state,
-        playingIndex: payload,
-      };
+      return R.assoc('playingIndex', payload, state);
     case ON_LOAD_START:
-      return {
-        ...state,
-        duration: 0,
-        currentTime: 0,
-      };
+      return R.merge(state, { duration: 0, currentTime: 0 });
     case ON_PLAY:
-      return {
-        ...state,
-        isPlaying: true,
-      };
+      return R.assoc('isPlaying', true, state);
     case ON_PAUSE:
-      return {
-        ...state,
-        isPlaying: false,
-      };
+      return R.assoc('isPlaying', false, state);
     case LOAD_NEW_PLAYING_INDEX:
-      const isNewPlayingIndex = state.playingIndex !== payload.trackId;
+      const isNewPlayingIndex =
+        R.prop('playingIndex', state) !== R.prop('trackId', payload);
       return isNewPlayingIndex
-        ? {
-            ...state,
-            playingIndex: payload.trackId,
-            trackUrl: payload.trackSrc,
-          }
+        ? R.merge(state, {
+            playingIndex: R.prop('trackId', payload),
+            trackUrl: R.prop('trackSrc', payload),
+          })
         : state;
     case ON_LOADED_METADATA:
-      return {
-        ...state,
-        duration: payload,
-      };
+      return R.assoc('duration', payload, state);
     case ON_TIME_UPDATE:
-      return {
-        ...state,
-        currentTime: payload,
-      };
+      return R.assoc('currentTime', payload, state);
     case ON_VOLUME_CHANGE:
-      return {
-        ...state,
-        muted: payload.muted,
-        volume: payload.volume,
-      };
+      return R.merge(state, {
+        muted: R.prop('muted', payload),
+        volume: R.prop('volume', payload),
+      });
     case TOGGLE_VOLUME:
-      return {
-        ...state,
-        muted: !state.muted,
-      };
+      return R.assoc('muted', !R.prop('muted', state), state);
     case TOGGLE_REPEAT:
-      return {
-        ...state,
-        repeat: !state.repeat,
-      };
+      return R.assoc('repeat', !R.prop('repeat', state), state);
     case TOGGLE_SHUFFLE:
-      return {
-        ...state,
-        shuffle: !state.shuffle,
-      };
+      return R.assoc('shuffle', !R.prop('shuffle', state), state);
     default:
       return state;
   }

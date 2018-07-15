@@ -12,7 +12,7 @@ import {
 import {
   getAlbumById,
   getEntities,
-  getLikedAlbums,
+  getLiked,
   getPlayingIndex,
 } from '../../selectors/index';
 import AlbumPage from '../../components/AlbumPage/index';
@@ -32,7 +32,7 @@ const mapStateToProps = (state, ownProps) => ({
   album: getAlbumById(state, ownProps.match.params.id),
   playingIndex: getPlayingIndex(state),
   tracks: getEntities(state, 'playlist'),
-  likedAlbums: getLikedAlbums(state),
+  likedAlbums: getLiked(state, 'likedAlbums'),
 });
 
 const mapDispatchToProps = {

@@ -1,6 +1,5 @@
 import {
   ON_LOAD_START,
-  PLAY_SONG,
   ON_PLAY,
   ON_PAUSE,
   LOAD_NEW_PLAYING_INDEX,
@@ -22,11 +21,6 @@ import {
   getShuffleIndex,
   getNextUrl,
 } from '../selectors';
-
-export const playSong = playingIndex => ({
-  type: PLAY_SONG,
-  payload: playingIndex,
-});
 
 export const onLoadStart = () => ({
   type: ON_LOAD_START,

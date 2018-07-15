@@ -31,9 +31,7 @@ const RangeWrapper = styled.div`
 
 const TrackInputRange = props => {
     const changeCurrentTime = currentTime => {
-        const { changeCurrentTime, onTimeUpdate } = props;
-
-        onTimeUpdate(currentTime);
+        const { changeCurrentTime } = props;
         changeCurrentTime(currentTime);
     };
 

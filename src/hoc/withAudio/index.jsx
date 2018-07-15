@@ -26,7 +26,7 @@ const Audio = InnerComponent => {
     componentWillReceiveProps(nextProps) {
       const { player } = this.props;
       if (player.playingIndex !== nextProps.player.playingIndex) {
-        this.changeCurrentTime(0);
+       // this.changeCurrentTime(0);
       }
     }
 

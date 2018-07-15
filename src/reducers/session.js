@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import uid from 'uid';
 import {
   USER_LOGIN,
@@ -8,62 +9,77 @@ import {
 } from '../constants/ActionTypes';
 import { DEFAULT_URL_IMG_AVATAR } from '../constants/User';
 
+// const initialState = {
+//   user: null,
+// };
 const initialState = {
-  user: null,
+  user: {
+    id: '2',
+    name: 'Teresa',
+    avatar:
+      'https://s3.amazonaws.com/uifaces/faces/twitter/itsajimithing/128.jpg',
+    likedTracks: [],
+    likedAlbums: [],
+    email: 'Thalia.Collier@hotmail.com',
+    isAuthenticated: true,
+  },
 };
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
     case USER_LOGIN: {
-      return {
-        ...state,
-        user: Object.assign(payload, { isAuthenticated: true }),
-      };
+      return R.assoc(
+        'user',
+        R.merge(payload, { isAuthenticated: true }),
+        state,
+      );
     }
     case USER_REGISTRATION_SUCCESS: {
-      return {
-        ...state,
-        user: Object.assign(payload, {
+      return R.assoc(
+        'user',
+        R.merge(payload, {
           id: uid(10),
           avatar: DEFAULT_URL_IMG_AVATAR,
           likedTracks: [],
           likedAlbums: [],
           isAuthenticated: true,
         }),
-      };
+        state,
+      );
     }
     case USER_LOGOUT: {
-      return {
-        ...state,
-        user: null,
-      };
+      return R.assoc('user', null, state);
     }
     case TOGGLE_LIKE_TRACK:
-      const isNewTrack = !state.user.likedTracks.includes(payload);
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          likedTracks: isNewTrack
-            ? [...state.user.likedTracks, payload]
-            : state.user.likedTracks.filter(
-                likedTrackId => likedTrackId !== payload,
-              ),
-        },
-      };
+      const isNewTrack = !R.contains(
+        payload,
+        R.path(['user', 'likedTracks'], state),
+      );
+      const userLikedTracks = R.path(['user', 'likedTracks'], state);
+      const likedTracksList = isNewTrack
+        ? R.append(payload, userLikedTracks)
+        : R.filter(trackId => trackId !== payload, userLikedTracks);
+
+      return R.assoc(
+        'user',
+        R.merge(R.prop('user', state), { likedTracks: likedTracksList }),
+        state,
+      );
     case TOGGLE_LIKE_ALBUM:
-      const isNewAlbum = !state.user.likedAlbums.includes(payload);
-      return {
-        ...state,
-        user: {
-          ...state.user,
-          likedAlbums: isNewAlbum
-            ? [...state.user.likedAlbums, payload]
-            : state.user.likedAlbums.filter(
-                likedAlbumId => likedAlbumId !== payload,
-              ),
-        },
-      };
+      const isNewAlbum = !R.contains(
+        payload,
+        R.path(['user', 'likedAlbums'], state),
+      );
+      const userLikedAlbums = R.path(['user', 'likedAlbums'], state);
+      const likedAlbumsList = isNewAlbum
+        ? R.append(payload, userLikedAlbums)
+        : R.filter(trackId => trackId !== payload, userLikedAlbums);
+
+      return R.assoc(
+        'user',
+        R.merge(R.prop('user', state), { likedAlbums: likedAlbumsList }),
+        state,
+      );
     default:
       return state;
   }
