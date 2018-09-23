@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { Fa, Button } from 'mdbreact';
 
+import { ADD_COUNT_ALBUMS } from '../../constants/User'
 import Album from '../Album/index';
 
 import './style.css';
@@ -41,7 +42,7 @@ const Albums = ({
         <div className="load-more-container">
           <Button
             className="load-more"
-            onClick={() => getMoreAlbums(5)}
+            onClick={() => getMoreAlbums(ADD_COUNT_ALBUMS)}
             color="info"
             disabled={albumsCount === currentCountAlbums}
           >

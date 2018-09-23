@@ -52,28 +52,6 @@ export const getLiked = (state, entities) =>
     R.always([]),
   )(state);
 
-// export const getTracks = state => {
-//     const applySearch = item => {
-//         const isContains = param => R.contains(
-//             R.toLower(state.tracksPage.search),
-//             R.toLower(R.prop(param, item))
-//         );
-//
-//         return isContains('name') || isContains('group')
-//     };
-//     const {user} = state;
-//     if(user.selectCategory === 'Favorite')
-//         return R.compose(
-//             R.filter(applySearch),
-//             R.map(id => getTrackById(state, id))
-//         )(state.user.liked);
-//
-//     return R.compose(
-//         R.filter(applySearch),
-//         R.map(id => getTrackById(state, id))
-//     )(state.tracksPage.ids)
-// };
-
 export const getEntities = (state, entities) => {
   const search = item => {
     const itemName = R.toLower(R.prop('name', item));

@@ -34,7 +34,11 @@ export default (state = initialState, { type, payload }) => {
         state,
       );
     case GET_MORE_ALBUMS:
-      return R.assoc('countAlbums', R.prop('countAlbums', state) + payload);
+      return R.assoc(
+        'countAlbums',
+        R.prop('countAlbums', state) + payload,
+        state,
+      );
     default:
       return state;
   }
